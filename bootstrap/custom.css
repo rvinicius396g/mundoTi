@@ -1,6 +1,22 @@
 body{
-	background-image:url("img\background.jpg");
+	/*background-image:url("img: ;\background.jpg");*/
 }
 .bnavega{
-	margin-bottom: 1px;
+	margin:0;
+	border-radius:0;
 }
+/*	SEÇÃO AS IMAGENS DO INDEX*/
+.imgindex{ /* Imagem do conteudo principal*/
+	height: 140px;
+	width: 140px;
+	margin:auto;
+}
+.Box_Imagens{  /*Area dos conteudos principais*/
+	text-align: center;
+	font-family:"Helvetica Neue,Helvetica,Arial,sans-serif";
+	font-size: 14px;
+}
+.box_descricao{  /*Descrição dos conteudos principais*/
+	font-size: 14px;
+}
+/*	FIM DAS SECOES DAS IMAGENS*/
