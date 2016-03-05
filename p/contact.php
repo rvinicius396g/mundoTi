@@ -59,7 +59,41 @@
 			</h2>
 			<h4>Para entrar em Contato preencha os dados abaixo, ou add pelo <b>Skype: robertoviniciusdasilva</b></h4>
 			<hr/>
-			<form role="form" action=""></form>
+			<form role="form" method="get" action="contact.php" style="margin-left:15px;margin-right:35px;">
+			  <div class="form-group">
+			    <label for="email">Email:</label>
+			    <input type="email" class="form-control" id="email" placeholder="seu@email.com" name="Bemail" autofocus required="required" />
+			  </div>
+			  <div class="form-group">
+			    <label for="pwd">Nome:</label>
+			    <input type="text" class="form-control" placeholder="Seu Nome" id="pwd" name="Bnome" required="required"/>
+			  </div>
+			  <div class="form-group">
+			  	<label for="Bmessage">Informação <h6 style="margin-top:0;">Insira em detalhes, o que deseja nos contatar</h6></label>
+			  	<textarea id="Bmessage" cols="30" rows="10" class="form-control" name="Bmessage" style="resize: none;" required="required"></textarea>
+			  </div>
+			  <button type="submit" class="btn btn-default" name="Bsend">Enviar</button>
+			</form>
+
+			<?php 
+				if(isset($_GET["Bnome"]) && isset($_GET["Bemail"]) && isset($_GET["Bmessage"]) ) {
+					// Dados para envio
+					$nome = $_GET["Bnome"];
+					$mail = $_GET["Bemail"];
+					$message = $_GET["Bmessage"];
+					// informações do mail, função para enviar
+					$to = 'roberto396g@hotmail.com';
+					$subject = "<h2>".$nome."</h2><br/><p>".$message."</p><br/>Enviada p/: <h5>".$message."<br/></h5>";
+					$sent = mail($to, $subject, $from);
+					if($sent = true){
+						echo "Enviado com Sucesso";
+					}else{
+						echo "Erro";
+					}
+					
+
+				}
+			?>
 		</section>
 		<footer class="col-md-12">
 			<?php include("../footer.php"); ?>
