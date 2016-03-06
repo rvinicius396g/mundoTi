@@ -130,7 +130,47 @@
 <button data-toggle="collapse" data-target="#aula7">Aula 7 - Criando o Footer</button>
 <div id="aula7" class="collapse">
 	<figure style="background-color:black;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/QNf7Gl3aO_I" frameborder="0" allowfullscreen style="display: block;margin: 0 auto;"></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/2lVtUAhqHq0" frameborder="0" allowfullscreen style="display: block;margin: 0 auto;"></iframe>
+		<figcaption style="background-color: white;">
+			<h4>Informações Importantes;</h4><hr/>
+			►| - BootStrap Link;	
+			<a href="http://adf.ly/12478773/bootstrap">Clique aqui</a><br>
+
+			►| - Sublime 3 Download (Passo a Passo);
+			<a href="http://adf.ly/12478773/sublimedown">Clique aqui</a><br>
+
+			►| - Instalando Seti_UI Theme no Sublime 3;
+			<a href="https://www.youtube.com/watch?v=C0lT6BKOpKE">Clique aqui</a><br>
+
+			►| - Skype : robertoviniciusdasilva
+		</figcaption>
+	</figure>
+</div>
+
+<button data-toggle="collapse" data-target="#aula8">Aula 8 - Inserindo Conteúdo no site</button>
+<div id="aula8" class="collapse">
+	<figure style="background-color:black;">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/HOl_Olv1Hao" frameborder="0" allowfullscreen style="display: block;margin: 0 auto;"></iframe>
+		<figcaption style="background-color: white;">
+			<h4>Informações Importantes;</h4><hr/>
+			►| - BootStrap Link;	
+			<a href="http://adf.ly/12478773/bootstrap">Clique aqui</a><br>
+
+			►| - Sublime 3 Download (Passo a Passo);
+			<a href="http://adf.ly/12478773/sublimedown">Clique aqui</a><br>
+
+			►| - Instalando Seti_UI Theme no Sublime 3;
+			<a href="https://www.youtube.com/watch?v=C0lT6BKOpKE">Clique aqui</a><br>
+
+			►| - Skype : robertoviniciusdasilva
+		</figcaption>
+	</figure>
+</div>
+
+<button data-toggle="collapse" data-target="#aula9">Aula 9 - Estilizando o site</button>
+<div id="aula9" class="collapse">
+	<figure style="background-color:black;">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/UBk34gDy4F0" frameborder="0" allowfullscreen style="display: block;margin: 0 auto;"></iframe>
 		<figcaption style="background-color: white;">
 			<h4>Informações Importantes;</h4><hr/>
 			►| - BootStrap Link;	
