@@ -1,3 +1,8 @@
+  <div class="alert alert-info" id="myAlert">
+    <a href="#" class="close">&times;</a>
+    <strong>Leia!</strong> Para ter acesso aos arquivos, imagens que foram utilizaas nas video aulas, leia a descrição.
+  </div>
+
 <h3 class="text-center">
 	BootStrap 3 - Desenvolvendo seu site responsivo!
 </h3><br/>
@@ -6,6 +11,11 @@
 </p>
 <p style="text-indent: 35px;font-size: 12pt;text-align: justify;">
 	O intuito dessas videos aulas, foram de ensinar a você criar um site responsivo na prática e não só ficar no conceito ou introdução, então é normal algumas coisas ficarem sobrando ou por fora, então é fundamentalmente crucial que vocês tenham a curiosidade de acessarem ou fazer o download de conteúdos extras, pois você terá uma base maior de conhecimento para o seu aprendizado.
+</p>
+<p style="text-indent: 35px;font-size: 12pt;text-align: justify;">
+	Para baixar o site com (imagens, arquivos, folhas de estilo), completoo, acesse o repositório no GitHub, abaixo;<br>
+	https://github.com/rvinicius396g/front-end-youtube
+
 </p>
 <button class="btn btn-info" data-toggle="collapse" data-target="#aula0">Aula 0 - BootStrap Introdução</button>
 <div id="aula0" class="collapse">
@@ -186,3 +196,14 @@
 		</figcaption>
 	</figure>
 </div>
+<div id="fb-root"></div>
+<!-- COMENTÁRIOS NO FACEBOOK EM RELACAO AO BOOTSTRAP -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://localhost/github/mundoTi/index.php?cont=bootstrap" data-width="100%" data-numposts="8"></div>
+<!-- COMENTÁRIOS NO FACEBOOK EM RELACAO AO BOOTSTRAP -->
