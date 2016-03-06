@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
+<!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta charset="UTF-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
 	<!-- CSS Modificado -->
-	<link rel="stylesheet" href="bootstrap/custom.css">
+	<link rel="stylesheet" href="../bootstrap/custom.css">
 	<!-- Script do ADF -->
 	<script type="text/javascript"> 
     var adfly_id = 12478773; 
@@ -40,33 +37,3 @@
 		     return i;
 		 }
 	 </script>
-	 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<title>Home</title>
-</head>
-<body>
-	<div class="container-fluid" style="padding:0;">
-		<?php
-			include("nav.php");
-		?>
-		<div class="col-md-12" style="margin-top:51px;padding:0;">
-			<?php 
-				include("carousel.php");
-			?>
-		</div>
-		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;">
-			<?php 
-				include("aside.php");
-			?>
-		</aside>
-		<article class="col-md-10 col-md-pull-2" style="padding:0;">
-			<?php
-				include("content.php");
-			?>
-		</article>
-		<footer class="col-md-12" style="margin-top: 15px;">
-			<?php include("footer.php"); ?>
-		</footer>
-	</div><!--Container-Fluid-->
-</body>
-</html>

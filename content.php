@@ -5,7 +5,7 @@
 		<!-- Descrição -->
 		<p class="box_descricao">Tutorial passo a passo para desenvolver um site totalmente responsivo, para qualquer dispositivo móvel</p>
 		<!-- Botão LINK -->
-		<p><a href="#" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a></p>
+		<p><a href="index.php?cont=bootstrap" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a></p>
 	</div>
 	<div class="col-md-4 Box_Imagens">
 		<img src="http://www.phoenixstudios.co.uk/blog/wp-content/uploads/2011/04/css3.jpg"  alt="CSS3 Tutorial, simples" class="img-circle imgindex">
@@ -23,11 +23,15 @@
 		<!-- Botão LINK -->
 		<p><a href="#" class="btn btn-default bot_detalhes" role="button">Ver Detalhes..</a></p>
 	</div>
-	<hr/>
+	<hr/>	
+</section>
+<section class="col-md-12">
 	<?php 
-		if (isset($_POST['bootstrapmore'])) {
-			echo "Boostrap";
+	if (isset($_GET['cont'])) {
+		switch ($_GET['cont']) {
+			case 'bootstrap':include("p/bootstrap3.php");break;
+			
 		}
+	}
 	?>
-	
 </section>
