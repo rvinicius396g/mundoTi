@@ -13,7 +13,7 @@
 		<!-- Descrição -->
 		<p class="box_descricao">Conceito básico do que é o CSS (Folhas de Estilo em Cascata) na prática e teoria, proporcionando um bom aprendizado.</p>
 		<!-- Botão LINK -->
-		<p><a href="#" class="btn btn-default bot_detalhes" role="button">Ver Detalhes..</a></p>
+		<p><a href="index.php?cont=css3" class="btn btn-default bot_detalhes" role="button">Ver Detalhes..</a></p>
 	</div>
 	<div class="col-md-4 Box_Imagens">
 		<img src="img/javascript.png"  alt="JavaScript tutorial, ensinando o conteito e como o utilizar" class="img-circle imgindex">
@@ -30,7 +30,7 @@
 	if (isset($_GET['cont'])) {
 		switch ($_GET['cont']) {
 			case 'bootstrap':include("p/bootstrap3.php");break;
-			
+			case 'css':echo "MANUTENÇÃO";
 		}
 	}
 	?>
