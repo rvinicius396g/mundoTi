@@ -1,10 +1,6 @@
 <?php 
 	include("conect.php"); 
 	$dbcon = conexao();
-
-	$n = $dbcon-> prepare("SELECT * FROM livros");
-	$n ->execute();
-	$nbook = $n-> rowCount();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -68,8 +64,35 @@
 			?>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
+			<h3 class="text-center">Livros para Download - Gratutito</h3>
+			<table>
+				
+			</table>
+			<hr>
 			<?php
-				include("content.php");
+				$busc = $dbcon->prepare("SELECT * FROM livros");
+				$busc -> execute();
+					while ($linha = $busc->fetch(PDO::FETCH_ASSOC)) {
+					?>
+						<div class="col-md-12">
+							<!-- Título -->
+							<div class="col-md-12"> <h4 style="text-transform:uppercase;" class="text-center"> <?php echo $linha['nome']; ?></h4> 
+							</div>
+							<div class="col-md-3">
+							<!-- IMagem em Destaque -->
+								 <img style="height: 150px; display:block;margin: auto;" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>"> 
+							</div>
+							<div class="col-md-9">
+							<!-- Descricao e download link -->
+								<p style="text-align:justify;text-indent:16px;font-size;13pt;">
+									<?php echo $linha['descricao']; ?>
+								</p>
+								<p class="text-left" style="text-transform:uppercase;"><i>Categorias:</i> <?php echo $linha['categoria']; ?> </p>
+								<a href="<?php echo $linha['download'];?>" target="_blank" class="btn btn-info">Download</a>
+							</div>
+						</div>
+					<?php
+					}
 			?>
 		</article>
 		<footer class="col-md-12" style="margin-top: 15px;">

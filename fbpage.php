@@ -6,4 +6,4 @@
   js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-page" data-href="https://www.facebook.com/mundodati/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/mundodati/"><a href="https://www.facebook.com/mundodati/">Mundo da Ti</a></blockquote></div></div>
+<div class="fb-page" data-href="https://www.facebook.com/mundodati/" data-tabs="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/mundodati/"><a href="https://www.facebook.com/mundodati/">Mundo da Ti</a></blockquote></div></div>

@@ -4,22 +4,22 @@
 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		<li data-target="#myCarousel" data-slide-to="1"></li>
 		<li data-target="#myCarousel" data-slide-to="2"></li>
-		<li data-target="#myCarousel" data-slide-to="3"></li>
+		<!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
 	</ol>
 	<!-- Conteudo do Carousel -->
 	<div class="carousel-inner" role="listbox">
 		<div class="item active" style="background-color: black;">
-			<img src="img/slid_03_03.jpg"  style="margin:auto;" alt="teste"/>
+			<img src="img/slidshow.png"  style="margin:auto;width: 100%;height: 270px;" alt="Saiba mais sobre o Mundo Ti, junte-se a nós ou nos apoie !"/>
 		</div>
 		<div class="item" style="background-color: black;">
-			<img src="img/slid_03_03.jpg" style="margin:auto;" alt="teste"/>
+			<img src="img/slidshow02.png" style="margin:auto;width: 100%;height: 270px;" alt="Livros gratuitos para download"/>
 		</div>
 		<div class="item" style="background-color: black;">
-			<img src="img/slid_03_03.jpg" style="margin:auto;" alt="teste"/>
+			<img src="img/slidshow03.png" style="margin:auto;width: 100%;height: 270px;" alt="Mundo TI no Youtube, entre em nosso canal!"/>
 		</div>
-		<div class="item" style="background-color: black;">
-			<img src="img/slid_03_03.jpg" style="margin:auto;" alt="teste"/>
-		</div>
+		<!-- <div class="item" style="background-color: black;">
+			<img src="img/slid_03_03.jpg" style="margin:auto;width: 100%;height: 270px;" alt="teste"/>
+		</div> -->
 		
 	</div>
 	<!-- Botões p/ direita e esquerda -->

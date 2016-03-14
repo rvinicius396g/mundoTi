@@ -1,3 +1,7 @@
+<?php 
+	include("../conect.php"); 
+	$dbcon = conexao();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,8 +19,15 @@
 		
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;margin-top: 51px;">
 			<?php 
-				include("../aside.php");
+				$n = $dbcon-> prepare("SELECT * FROM livros");
+				$n ->execute();
+				$nbook = $n-> rowCount(); 
 			?>
+			<h3 class="text-center">Categorias</h3><hr style="margin-top: 0;" />
+			<a href="../book.php" class="btn btn-default list-group-item" role="button">
+				<span class="badge"><?php echo $nbook; ?></span>
+				Livros
+			</a>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;margin-top: 51px;">
 			<h2 class="text-center">Sobre</h2><hr>
