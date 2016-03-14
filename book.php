@@ -64,7 +64,7 @@
 			?>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
-			<h3 class="text-center">Livros para Download - Gratutito</h3>
+			<h3 class="text-center">Livros para Download - Gratuito</h3>
 			<table>
 				
 			</table>
