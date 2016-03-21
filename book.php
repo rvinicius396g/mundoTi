@@ -138,20 +138,19 @@
 					$busc -> execute();
 					while ($linha = $busc->fetch(PDO::FETCH_ASSOC)) {
 					?>
-						<div class="col-md-12">
-							<!-- Título -->
-							<div class="col-md-12"> 
+						<div class="col-md-12">							
+							<div class="col-md-3">
+							<!-- IMagem em Destaque -->
+								 <img style="width:115px;height:150px;display:block;margin:auto;margin-bottom:5px;padding-right:0;" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>" data-toggle="tooltip" data-placement="right" title=" <?php echo $linha['nome'] ?>"/> 
+							</div>
+							<div class="col-md-9">
+								<!-- Título -->
 								<h4 style="text-transform:uppercase;" class="text-center"> 
 									<a href="book.php?liv=<?php echo $linha['id']; ?>">
 										<?php echo $linha['nome']; ?>
 									</a>
-								</h4> 
-							</div>
-							<div class="col-md-3">
-							<!-- IMagem em Destaque -->
-								 <img style="height: 150px; display:block;margin: auto;" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>"/> 
-							</div>
-							<div class="col-md-9">
+								</h4>
+								<!-- FIM TITULO -->
 							<!-- Descricao e download link -->
 								<p style="text-align:justify;text-indent:16px;font-size;13pt;">
 									<?php echo $linha['descricao']; ?>
