@@ -45,6 +45,13 @@
 		     return i;
 		 }
 	 </script>
+	 <!-- Inicialização do Tooltip  -->
+		<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip(); 
+		});
+		</script>
+	 <!-- Fim TOOLTIP -->
 	 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<title>Home</title>
@@ -100,18 +107,16 @@
 							echo $cont['gdescricao'];
 						?>
 					</p>
+					<a href="<?php echo $cont['download'];?>" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Click to Download!">
+						Download
+					</a>
 					<h3 class="text-center">
 						Leia abaixo o Livro
 					</h3>
 					<!-- EMBED CODE -->
 					<figure class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" height="513px" src="//e.issuu.com/embed.html#18185283/34300725" frameborder="0" allowfullscreen></iframe>
+						<iframe class="embed-responsive-item" style="560px;" src="<?php echo $cont['embed'] ?>" frameborder="0" allowfullscreen></iframe>
 					</figure>
-	
-					<!-- 	<?php 
-							echo $cont['embed'];
-						?> -->
-					<!-- END OF EMBE -->
 
 					<!-- Campo de Comentários -->
 					<div id="fb-root"></div>
