@@ -4,6 +4,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+<meta charset="UTF-8"/>
 <head>
 	<!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -65,22 +66,85 @@
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
 			<h3 class="text-center">Livros para Download - Gratuito</h3>
-			<table>
-				
-			</table>
+
 			<hr>
 			<?php
-				$busc = $dbcon->prepare("SELECT * FROM livros");
-				$busc -> execute();
+				if (isset($_GET['liv'])) {
+						$id = $_GET['liv'];
+						// Pesquisa do respectivo conteudo, clicado
+						$lcont = $dbcon->prepare("SELECT * FROM livros WHERE id = :ident");
+						// substituição do pseudo pela variável id
+						$lcont ->bindValue(":ident",$id);
+						// execucao da pesquis
+						$lcont ->execute();
+						// Associando cada Array as respectivas colunas
+						$cont = $lcont->fetch(PDO::FETCH_ASSOC);
+				?>
+				<div class="row">
+					<h1 class="text-center">
+						<?php echo $cont['nome']; ?>
+					</h1>
+				</div>
+				<div class="col-md-3"> <!-- IMAGEM -->
+					<img style="height: 150px; display:block;margin: auto;" src="<?php echo $cont['img'];  ?>" alt=" <?php echo $cont['nome'];?>"/> 
+				</div>	<!--FIM IMAGEM -->
+				<div class="col-md-9">
+					<p style="font-size:13pt;text-align: justify;text-indent: 20px;margin-top: 0;">
+					
+						<?php 
+							echo $cont['descricao']."<br/>";
+						?>
+					</p>
+					<p style="font-size:13pt;text-align: justify;text-indent: 20px;margin-top: 0;">
+						<?php 
+							echo $cont['gdescricao'];
+						?>
+					</p>
+					<h3 class="text-center">
+						Leia abaixo o Livro
+					</h3>
+					<!-- EMBED CODE -->
+					<figure class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" height="513px" src="//e.issuu.com/embed.html#18185283/34300725" frameborder="0" allowfullscreen></iframe>
+					</figure>
+	
+					<!-- 	<?php 
+							echo $cont['embed'];
+						?> -->
+					<!-- END OF EMBE -->
+
+					<!-- Campo de Comentários -->
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+
+					<div class="fb-comments" data-href="http://mundoti.site88.net/book.php?liv=<?php echo $cont['id']; ?>" data-width="100%" data-numposts="6">
+					</div>					
+					<!-- FIM COMENTS  -->
+				</div>
+				<?php
+				}else{
+					$busc = $dbcon->prepare("SELECT * FROM livros");
+					$busc -> execute();
 					while ($linha = $busc->fetch(PDO::FETCH_ASSOC)) {
 					?>
 						<div class="col-md-12">
 							<!-- Título -->
-							<div class="col-md-12"> <h4 style="text-transform:uppercase;" class="text-center"> <?php echo $linha['nome']; ?></h4> 
+							<div class="col-md-12"> 
+								<h4 style="text-transform:uppercase;" class="text-center"> 
+									<a href="book.php?liv=<?php echo $linha['id']; ?>">
+										<?php echo $linha['nome']; ?>
+									</a>
+								</h4> 
 							</div>
 							<div class="col-md-3">
 							<!-- IMagem em Destaque -->
-								 <img style="height: 150px; display:block;margin: auto;" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>"> 
+								 <img style="height: 150px; display:block;margin: auto;" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>"/> 
 							</div>
 							<div class="col-md-9">
 							<!-- Descricao e download link -->
@@ -88,12 +152,26 @@
 									<?php echo $linha['descricao']; ?>
 								</p>
 								<p class="text-left" style="text-transform:uppercase;"><i>Categorias:</i> <?php echo $linha['categoria']; ?> </p>
-								<a href="<?php echo $linha['download'];?>" target="_blank" class="btn btn-info">Download</a>
 							</div>
 						</div>
 					<?php
+					} //Fim while
+
 					}
+
 			?>
+
+
+
+
+
+
+
+
+
+
+
+
 		</article>
 		<footer class="col-md-12" style="margin-top: 15px;">
 			<?php include("footer.php"); ?>
