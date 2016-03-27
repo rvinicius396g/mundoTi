@@ -13,7 +13,7 @@
 		<!-- Descrição -->
 		<p class="box_descricao">Conceito básico do que é o CSS (Folhas de Estilo em Cascata) na prática e teoria, proporcionando um bom aprendizado.</p>
 		<!-- Botão LINK -->
-		<p><a href="index.php?cont=css3" class="btn btn-default bot_detalhes" role="button">Ver Detalhes..</a></p>
+		<p><a href="index.php?cont=css3" class="btn btn-default bot_detalhes" onclick="window.alert('Manutençao');" role="button">Ver Detalhes..</a></p>
 	</div>
 	<div class="col-md-4 Box_Imagens">
 		<img src="img/javascript.png"  alt="JavaScript tutorial, ensinando o conteito e como o utilizar" class="img-circle imgindex">
@@ -21,7 +21,7 @@
 		<!-- Descrição -->
 		<p class="box_descricao">Introdução ao JS, explicando o seu conceito e como o utilizar, utilizando exercícios de lógica de forma a proporcionar uma fixação do conteúdo.</p>
 		<!-- Botão LINK -->
-		<p><a href="#" class="btn btn-default bot_detalhes" role="button">Ver Detalhes..</a></p>
+		<p><a href="index.php?cont=js" class="btn btn-default bot_detalhes" role="button" onclick="window.alert('Manutençao');">Ver Detalhes..</a></p>
 	</div>
 	<hr/>	
 </section>

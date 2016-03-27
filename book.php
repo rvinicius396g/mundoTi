@@ -86,6 +86,7 @@
 						$lcont ->execute();
 						// Associando cada Array as respectivas colunas
 						$cont = $lcont->fetch(PDO::FETCH_ASSOC);
+						$id = $cont['id'];
 				?>
 				<div class="row">
 					<h1 class="text-center">
@@ -115,7 +116,7 @@
 					</h3>
 					<!-- EMBED CODE -->
 					<figure class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" style="560px;" src="<?php echo $cont['embed'] ?>" frameborder="0" allowfullscreen></iframe>
+						<iframe class="embed-responsive-item" style="560px;" src="<?php echo $cont['embed']; ?>" frameborder="0" allowfullscreen></iframe>
 					</figure>
 
 					<!-- Campo de Comentários -->
@@ -124,19 +125,19 @@
 					  var js, fjs = d.getElementsByTagName(s)[0];
 					  if (d.getElementById(id)) return;
 					  js = d.createElement(s); js.id = id;
-					  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+					  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=504258529757506";
 					  fjs.parentNode.insertBefore(js, fjs);
 					}(document, 'script', 'facebook-jssdk'));</script>
-
-					<div class="fb-comments" data-href="http://mundoti.site88.net/book.php?liv=<?php echo $cont['id']; ?>" data-width="100%" data-numposts="6">
-					</div>					
+					<div class="fb-comments" data-href="http://mundoti.site88.net/book.php?liv=<?php echo $id;?>" data-width="100%" data-numposts="5"></div>
 					<!-- FIM COMENTS  -->
 				</div>
 				<?php
 				}else{
-					$busc = $dbcon->prepare("SELECT * FROM livros");
+					$busc = $dbcon->prepare("SELECT DISTINCT *  FROM  livros");
 					$busc -> execute();
-					while ($linha = $busc->fetch(PDO::FETCH_ASSOC)) {
+					$linha = $busc->fetch(PDO::FETCH_ASSOC);
+					for ($i=0; $i < 3; $i++) { 
+
 					?>
 						<div class="col-md-12">							
 							<div class="col-md-3">
@@ -146,7 +147,7 @@
 							<div class="col-md-9">
 								<!-- Título -->
 								<h4 style="text-transform:uppercase;" class="text-center"> 
-									<a href="book.php?liv=<?php echo $linha['id']; ?>">
+									<a href="book.php?liv=<?php echo $linha[".'$i'."]; ?>">
 										<?php echo $linha['nome']; ?>
 									</a>
 								</h4>
@@ -159,7 +160,7 @@
 							</div>
 						</div>
 					<?php
-					} //Fim while
+					} //Fim for
 
 					}
 
