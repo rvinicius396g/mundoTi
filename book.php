@@ -69,6 +69,7 @@
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;">
 			<?php 
 				include("aside.php");
+				echo "<hr/>";
 			?>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
