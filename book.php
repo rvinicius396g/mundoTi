@@ -86,7 +86,14 @@
 						$lcont ->execute();
 						// Associando cada Array as respectivas colunas
 						$cont = $lcont->fetch(PDO::FETCH_ASSOC);
-						$id = $cont['id'];
+					
+						// Numeros de visuzliação
+						$views = $cont["views"]+1;
+						$insert = $dbcon->prepare("UPDATE livros SET views = :visu WHERE id = :ident");
+						$insert->bindValue(":visu",$views);
+						$insert->bindValue(":ident",$id);
+						$insert->execute();
+						// echo $views;
 				?>
 				<div class="row">
 					<h1 class="text-center">
@@ -133,10 +140,10 @@
 				</div>
 				<?php
 				}else{
-					$busc = $dbcon->prepare("SELECT DISTINCT *  FROM  livros");
+					$busc = $dbcon->prepare("SELECT  *  FROM  livros");
 					$busc -> execute();
-					$linha = $busc->fetch(PDO::FETCH_ASSOC);
-					for ($i=0; $i < 3; $i++) { 
+					
+					while ($linha = $busc->fetch(PDO::FETCH_ASSOC)) { 
 
 					?>
 						<div class="col-md-12">							
@@ -147,7 +154,7 @@
 							<div class="col-md-9">
 								<!-- Título -->
 								<h4 style="text-transform:uppercase;" class="text-center"> 
-									<a href="book.php?liv=<?php echo $linha[".'$i'."]; ?>">
+									<a href="book.php?liv=<?php echo $linha["id"]; ?>">
 										<?php echo $linha['nome']; ?>
 									</a>
 								</h4>
@@ -165,18 +172,6 @@
 					}
 
 			?>
-
-
-
-
-
-
-
-
-
-
-
-
 		</article>
 		<footer class="col-md-12" style="margin-top: 15px;">
 			<?php include("footer.php"); ?>
