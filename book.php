@@ -67,9 +67,30 @@
 			?>
 		</div>
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;">
+		
+		<hr style="margin-top:0;" />
 			<?php 
 				include("aside.php");
-				echo "<hr/>";
+				// CATEGORIAS
+				echo "<h3 class='text-center' style='margin-bottom:5px'>Categorias</h3><br/>";
+				$categor = $dbcon->prepare("SELECT DISTINCT * FROM livros"); 
+				$categor->execute();
+// echo "<a class='btn btn-default' href='#'>".$pcategorias['categoria']."</a><br/>";
+				
+					while ($mcat = $categor->fetch(PDO::FETCH_ASSOC)) {
+						echo "<a class='btn btn-default' href='#'>".$mcat['categoria']."</a><br/>";
+					}
+				
+				// LIVROS MAIS VISTOS
+				echo "<h3 class='text-center' style='margin-bottom:5px;'>Mais Vistos</h3><br/>";
+						$moreviews = $dbcon->prepare("SELECT * FROM livros ORDER BY views DESC");
+						$moreviews -> execute();
+
+						$mvie = $moreviews->fetchAll(PDO::FETCH_ASSOC);
+							foreach ($mvie as $maisVistas) {
+								echo $maisVistas["nome"]."<br/>";
+							}
+				
 			?>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
@@ -139,12 +160,14 @@
 					<div class="fb-comments" data-href="http://mundoti.site88.net/book.php?liv=<?php echo $id;?>" data-width="100%" data-numposts="5"></div>
 					<!-- FIM COMENTS  -->
 				</div>
+
+				
 				<?php
 				}else{
 					$busc = $dbcon->prepare("SELECT  *  FROM  livros");
 					$busc -> execute();
 					
-					while ($linha = $busc->fetch(PDO::FETCH_ASSOC)) { 
+					while ($linha = $busc->fetch(PDO::FETCH_ASSOC )) { 
 
 					?>
 						<div class="col-md-12">							
