@@ -1,27 +1,109 @@
-body{
-	/*background-image:url("img: ;\background.jpg");*/
-}
-.bnavega{
-	
-}
+	body{
+		/*background-image:url("img: ;\background.jpg");*/
+	}
+	hr{
+		margin-top: 0;
+	}
+	/* SEÇÃO DO NAV*/
+	.bnavega{
+		background-image: url("../img/img_theme/images/nav_background_01.png");
+		height:75px;
+		border: 0;
+	}
+		.area_logo{
+
+		}
+		.logo_image{
+			margin-top: 13px;
+			margin-left: 9px;
+			height: 35px;
+		}
+		.tit_menu_nav{
+			font-style: Arial;
+			font-size: 17pt;
+		}
+		.area_tit_menu_nav{
+			margin-top: 17px;
+			margin-left: 40px;
+		}
+		.box_bucs{
+			margin-top:19px;
+			float:right;
+		}
+			.boxtest{
+				border-radius:5px;
+				border:1px gray;
+			}
 /*	SEÇÃO AS IMAGENS DO INDEX*/
-.imgindex{ /* Imagem do conteudo principal- abaixo do slids*/
-	height: 140px;
-	width: 140px;
-	margin:auto;
-}
-.Box_Imagens{  /*Area dos conteudos principais*/
-	text-align: center;
-	font-family:"Helvetica Neue,Helvetica,Arial,sans-serif";
-	font-size: 14px;
-}
-.box_descricao{  /*Descrição dos conteudos principais*/
-	font-size: 14px;
-}
+	.imgindex{ /* Imagem do conteudo principal- abaixo do slids*/
+		height: 140px;
+		width: 140px;
+		margin:auto;
+	}
+	.Box_Imagens{  /*Area dos conteudos principais*/
+		text-align: center;
+		font-family:"Helvetica Neue,Helvetica,Arial,sans-serif";
+		font-size: 14px;
+	}
+	.box_descricao{  /*Descrição dos conteudos principais*/
+		font-size: 14px;
+	}
 /*	FIM DAS SECOES DAS IMAGENS*/
+/* SEÇÃO DO CAROUSEL */
+	.carouselarea{
+		margin-top: 30px;
+	}
+	.imgOfCarousel{
+		margin:auto;
+		width: 100%;
+		height: 270px;
+	}
+	.fundo_d_imagensCarousel{
+		background-color: black;
+	}
+/* FIM DO CAROUSEL*/
 /*		 FOOOTER SECAO 		*/
-.iconFoter{
-	height:64px;
-	margin-right: 15px;
-}
+	.iconFoter{
+		height:64px;
+		margin-right: 15px;
+	}
+	.footer_secao{
+		margin-top: 15px;
+	}
+	.titulo_footer{
+		font-style: 'comic sans ms';
+	}
 /*		 FIM FOOOTER 		*/
+/*	ESTILOS DA PAGINA LIVROS */
+	.ImgBook{
+		width:115px;
+		height:150px;
+		display:block;
+		margin:auto;
+		margin-bottom:5px;
+		padding-right:0;
+	}
+		.img_detalhes{
+			height: 150px; 
+			display:block;
+			margin: auto;
+		}
+	.TituloBook{
+		text-transform:uppercase;
+	}
+	.TestoCategoria{
+		text-transform:uppercase;
+	}
+
+	.DescrBook{
+		text-align:justify;
+		text-indent:16px;
+		font-size:13pt;
+	}
+		.descricao_detalhes{
+			font-size:13pt;
+			text-align: justify;
+			text-indent: 20px;
+			margin-top: 0;
+		}
+/* FIM DA PAGINA LIVRO*/

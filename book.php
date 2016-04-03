@@ -123,16 +123,16 @@
 					</h1>
 				</div>
 				<div class="col-md-3"> <!-- IMAGEM -->
-					<img style="height: 150px; display:block;margin: auto;" src="<?php echo $cont['img'];  ?>" alt=" <?php echo $cont['nome'];?>"/> 
+					<imgc class="img_detalhes" src="<?php echo $cont['img'];  ?>" alt=" <?php echo $cont['nome'];?>"/> 
 				</div>	<!--FIM IMAGEM -->
 				<div class="col-md-9">
-					<p style="font-size:13pt;text-align: justify;text-indent: 20px;margin-top: 0;">
+					<p class="descricao_detalhes">
 					
 						<?php 
 							echo $cont['descricao']."<br/>";
 						?>
 					</p>
-					<p style="font-size:13pt;text-align: justify;text-indent: 20px;margin-top: 0;">
+					<p class="descricao_detalhes">
 						<?php 
 							echo $cont['gdescricao'];
 						?>
@@ -173,31 +173,31 @@
 						<div class="col-md-12">							
 							<div class="col-md-3">
 							<!-- IMagem em Destaque -->
-								 <img style="width:115px;height:150px;display:block;margin:auto;margin-bottom:5px;padding-right:0;" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>" data-toggle="tooltip" data-placement="right" title=" <?php echo $linha['nome'] ?>"/> 
+								 <img class="ImgBook" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>" data-toggle="tooltip" data-placement="right" title=" <?php echo $linha['nome'] ?>"/> 
 							</div>
 							<div class="col-md-9">
 								<!-- Título -->
-								<h4 style="text-transform:uppercase;" class="text-center"> 
+								<h4 class="TituloBook" class="text-center"> 
 									<a href="book.php?liv=<?php echo $linha["id"]; ?>">
 										<?php echo $linha['nome']; ?>
 									</a>
 								</h4>
 								<!-- FIM TITULO -->
 							<!-- Descricao e download link -->
-								<p style="text-align:justify;text-indent:16px;font-size;13pt;">
+								<p class="DescrBook">
 									<?php echo $linha['descricao']; ?>
 								</p>
-								<p class="text-left" style="text-transform:uppercase;"><i>Categorias:</i> <?php echo $linha['categoria']; ?> </p>
+								<p class="text-left" class="TestoCategoria"><i>Categorias:</i> <?php echo $linha['categoria']; ?> </p>
 							</div>
 						</div>
 					<?php
-					} //Fim for
+					} //Fim WHILE
 
 					}
 
 			?>
 		</article>
-		<footer class="col-md-12" style="margin-top: 15px;">
+		<footer class="col-md-12 footer_secao">
 			<?php include("footer.php"); ?>
 		</footer>
 	</div><!--Container-Fluid-->
