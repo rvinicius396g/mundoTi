@@ -26,13 +26,18 @@
 			margin-top: 17px;
 			margin-left: 40px;
 		}
-		.box_bucs{
+		.box_bucs{ /*	Posição do form para menu de pesquisa!	*/
 			margin-top:19px;
 			float:right;
 		}
-			.boxtest{
-				border-radius:5px;
-				border:1px gray;
+			.boxtest{  /* Entrada de dados para buscas !*/
+				border: 2px #000;
+				border-radius: 7px;				
+				width: 235px;
+				height: 30px;
+			}
+			.btnPesquisa{
+				/*height:30px;*/
 			}
 /*	SEÇÃO AS IMAGENS DO INDEX*/
 	.imgindex{ /* Imagem do conteudo principal- abaixo do slids*/
