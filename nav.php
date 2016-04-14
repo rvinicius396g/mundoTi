@@ -6,8 +6,8 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>						
 			</button>
-				<a href="index.php" class="navbar-brand are_logo">
-					<img class="logo_image" src="img/img_theme/images/img_logo_03.jpg" alt="Logo Site">
+				<a href="index.php" class="navbar-brand area_logo">
+					<img class="logo_image" src="img/logo_head.png" alt="Logo Site">
 				</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">

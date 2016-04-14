@@ -11,12 +11,13 @@
 		border: 0;
 	}
 		.area_logo{
-
+			margin:0;
+			padding:0;
 		}
 		.logo_image{
-			margin-top: 13px;
-			margin-left: 9px;
-			height: 35px;
+			margin-top: 0px;
+			margin-left: 15px;
+			height: 65px;
 		}
 		.tit_menu_nav{
 			font-style: Arial;
