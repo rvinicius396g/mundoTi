@@ -51,11 +51,11 @@
 	<title>Sobre</title>
 </head>
 <body>
-	<div class="container-fluid" style="padding:0;">
 		<?php
 			include("pnav.php");
 		?>
-		
+	<div class="container-fluid" style="padding:0;">
+			
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;margin-top: 51px;">
 			<?php 
 				$n = $dbcon-> prepare("SELECT * FROM livros");

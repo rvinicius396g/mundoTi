@@ -12,10 +12,17 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a class="tit_menu_nav" href="../index.php">Home</a></li>							
-					<li><a class="tit_menu_nav" href="about.php">Sobre</a></li>
-					<li><a class="tit_menu_nav" href="contact.php">Contato</a></li>
+
+					<li class="area_tit_menu_nav"><a class="tit_menu_nav" href="about.php">Sobre</a></li>
+					<li class="area_tit_menu_nav"><a class="tit_menu_nav" href="contact.php">Contato</a></li>
+				
 				</ul>
+				<div class="box_bucs">
+					<form action="search.php" method="get">
+						<input class="boxtest" type="text"  name="textsearch" placeholder="Search ..." required>
+						<input class="btnPesquisa" type="image" name="Btnsearch" src="../img/img_theme/images/search_09.jpg">
+					</form>
+				</div>
 		</div>
 	</div><!--END !!Container-Fluid-->
 </nav>

@@ -4,7 +4,13 @@
 	hr{
 		margin-top: 0;
 	}
+	h1,h2,h3,h4,h5,h6{
+		margin-top:30px;
+	}
 	/* SEÇÃO DO NAV*/
+	.navbar{
+		margin-bottom:0;
+	}
 	.bnavega{
 		background-image: url("../img/img_theme/images/nav_background_01.png");
 		height:75px;
@@ -57,7 +63,10 @@
 /*	FIM DAS SECOES DAS IMAGENS*/
 /* SEÇÃO DO CAROUSEL */
 	.carouselarea{
-		margin-top: 30px;
+		margin-top: 76px;
+	}
+	elemento{
+		margin-top:0;
 	}
 	.imgOfCarousel{
 		margin:auto;

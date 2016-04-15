@@ -18,9 +18,9 @@
 
 				</ul>
 				<div class="box_bucs">
-					<form action="search.php" method="get">
-						<input class="boxtest" type="text"  name="textsearch" placeholder="Search ..." requried>
-						<input class="btnPesquisa" type="image" name="btnsearch" src="img/img_theme/images/search_09.jpg">
+					<form action="p/search.php" method="get">
+						<input class="boxtest" type="text"  name="textsearch" placeholder="Search ..." required>
+						<input class="btnPesquisa" type="image" name="Btnsearch" src="img/img_theme/images/search_09.jpg">
 					</form>
 				</div>
 		</div>

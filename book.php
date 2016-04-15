@@ -61,7 +61,7 @@
 		<?php
 			include("nav.php");
 		?>
-		<div class="col-md-12" style="margin-top:51px;padding:0;">
+		<div class="col-md-12" style=";padding:0;">
 			<?php 
 				include("carousel.php");
 			?>

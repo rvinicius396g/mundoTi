@@ -2,9 +2,9 @@
 	include("conect.php"); 
 	$dbcon = conexao();
 
-	$n = $dbcon-> prepare("SELECT * FROM livros");
-	$n ->execute();
-	$nbook = $n-> rowCount();
+	// $n = $dbcon-> prepare("SELECT * FROM livros");
+	// $n ->execute();
+	// $nbook = $n-> rowCount();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,25 +53,32 @@
 	<title>Home</title>
 </head>
 <body>
+	<?php
+	// Barra de navegação
+		include("nav.php");
+	?>
 	<div class="container-fluid" style="padding:0;">
-		<?php
-			include("nav.php");
-		?>
-		<div class="col-md-12" style="margin-top:51px;padding:0;">
+
+		<!-- Slid show -->
+		<div class="col-md-12" style="padding:0;">
 			<?php 
 				include("carousel.php");
 			?>
 		</div>
+		<!-- Barra lateral -->
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;">
+		<h3 class="text-center">Categorias</h3><hr style="margin-top: 0;" />
 			<?php 
 				include("aside.php");
 			?>
 		</aside>
+		<!-- Conteudo -->
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
 			<?php
 				include("content.php");
 			?>
 		</article>
+		<!-- Footer -->
 		<footer class="col-md-12" style="margin-top: 15px;">
 			<?php include("footer.php"); ?>
 		</footer>
