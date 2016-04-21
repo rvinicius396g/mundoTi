@@ -17,7 +17,8 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 	<!-- CSS Modificado -->
 	<link rel="stylesheet" href="bootstrap/custom.css">
-	<!-- Script do ADF -->
+	<!-- Script do ADF 
+	
 	<script type="text/javascript"> 
     var adfly_id = 12478773; 
     var adfly_advert = 'int'; 
@@ -26,7 +27,7 @@
     var init_delay = 3; 
     var popunder = true; 
 	</script> 
-	<script src="https://cdn.adf.ly/js/entry.js"></script> 
+	<script src="https://cdn.adf.ly/js/entry.js"></script> -->
 	<!-- Script do horario -->
 	 	 <script type="text/javascript">
 		 function startTime() {

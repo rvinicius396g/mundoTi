@@ -122,3 +122,15 @@
 			margin-top: 0;
 		}
 /* FIM DA PAGINA LIVRO*/
+	/* Estilo do botão de download  */
+.areDownload{
+	padding-left:0;
+	padding-right:0;
+	height:125px;
+	/* background-image: url("../img/download_area.png");
+	background-repeat:no-repeat; */
+}
+.imgDownloadIcon{
+	height:70px;
+	margin-left:25%;
+}

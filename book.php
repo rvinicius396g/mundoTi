@@ -73,12 +73,14 @@
 				include("aside.php");
 				// CATEGORIAS
 				echo "<h3 class='text-center' style='margin-bottom:5px'>Categorias</h3><br/>";
-				$categor = $dbcon->prepare("SELECT DISTINCT * FROM livros"); 
+				$categor = $dbcon->prepare("SELECT DISTINCT categoria FROM livros"); 
 				$categor->execute();
-// echo "<a class='btn btn-default' href='#'>".$pcategorias['categoria']."</a><br/>";
+				// echo "<a class='btn btn-default' href='#'>".$pcategorias['categoria']."</a><br/>";
 				
+
 					while ($mcat = $categor->fetch(PDO::FETCH_ASSOC)) {
-						echo "<a class='btn btn-default' href='#'>".$mcat['categoria']."</a><br/>";
+						$lcategoria = $mcat['categoria'];
+						echo "<a class='btn btn-default' href='book.php?catbook=$lcategoria'>".$lcategoria."</a><br/>";
 					}
 				
 				// LIVROS MAIS VISTOS
@@ -98,7 +100,38 @@
 
 			<hr>
 			<?php
-				if (isset($_GET['liv'])) {
+				if (isset($_GET['catbook'])) {
+						$cat = $_GET['catbook'];
+						$sb = $dbcon->prepare("SELECT * FROM livros WHERE categoria = $cat");
+						$sb-> execute();
+							
+					while ($lcat = $sb->fetch(PDO::FETCH_ASSOC )) { 
+
+					?>
+						<div class="col-md-12">							
+							<div class="col-md-3">
+							<!-- IMagem em Destaque -->
+								 <img class="ImgBook" src="<?php echo $lcat['img'];  ?>" alt=" <?php echo $lcat['nome'];?>" data-toggle="tooltip" data-placement="right" title=" <?php echo $lcat['nome'] ?>"/> 
+							</div>
+							<div class="col-md-9">
+								<!-- Título -->
+								<h4 class="TituloBook" class="text-center"> 
+									<a href="book.php?liv=<?php echo $lcat["id"]; ?>">
+										<?php echo $lcat['nome']; ?>
+									</a>
+								</h4>
+								<!-- FIM TITULO -->
+							<!-- Descricao e download link -->
+								<p class="DescrBook">
+									<?php echo $lcat['descricao']; ?>
+								</p>
+								<p class="text-left" class="TestoCategoria"><i>Categorias:</i> <?php echo $lcat['categoria']; ?> </p>
+							</div>
+						</div>
+					<?php
+					} //Fim WHILE
+
+				}elseif (isset($_GET['liv'])) {
 						$id = $_GET['liv'];
 						// Pesquisa do respectivo conteudo, clicado
 						$lcont = $dbcon->prepare("SELECT * FROM livros WHERE id = :ident");
@@ -137,9 +170,12 @@
 							echo $cont['gdescricao'];
 						?>
 					</p>
-					<a href="<?php echo $cont['download'];?>" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Click to Download!">
-						Download
-					</a>
+					<div class="col-md-12 areDownload">
+						<h4 class="text-center"><u>Download</u></h4>
+						<a href="<?php echo $cont['download'];?>" class="" data-toggle="tooltip" data-placement="bottom" title="Click to Download!">
+							<img src="img/mega-cloud-icon.png" alt="Mega" class="imgDownloadIcon">
+						</a>
+					</div>
 					<h3 class="text-center">
 						Leia abaixo o Livro
 					</h3>
@@ -160,9 +196,10 @@
 					<div class="fb-comments" data-href="http://mundoti.site88.net/book.php?liv=<?php echo $id;?>" data-width="100%" data-numposts="5"></div>
 					<!-- FIM COMENTS  -->
 				</div>
-
+						
 				
 				<?php
+
 				}else{
 					$busc = $dbcon->prepare("SELECT  *  FROM  livros");
 					$busc -> execute();
@@ -192,8 +229,9 @@
 						</div>
 					<?php
 					} //Fim WHILE
-
 					}
+					
+				
 
 			?>
 		</article>

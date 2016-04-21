@@ -51,20 +51,50 @@
 	<title>Search.</title>
 </head>
 <body>
-		<?php include("pnav.php"); ?>
+		<?php include("pnav.php"); 
+			$pchave = $_GET['textsearch'];
+			$psq = $dbcon-> prepare("SELECT *  FROM livros WHERE nome LIKE '%$pchave%' ");
+			$psq -> execute();
+			$row = $psq -> rowCount();
+			// echo $row;
+		?>
 	<div class="container" style="margin-top:75px;">
 		<section class="col-md-10">
-			<h3 class="text-center">Resultado da Pesquisa</h3>
+		<?php if ($row != 0) {	
+		 ?>
+			<h3 class="text-center">Resultados da Pesquisa     </small><span><small><?php echo $row; ?></small></span></h3>
+
 			<hr/>
 				
 			<?php 
-				$pchave = $_GET['textsearch'];
-				$psq = $dbcon-> prepare("SELECT *  FROM livros WHERE nome LIKE %':chave'% ");
-				$psq->bindValue("chave",$pchave);
-				$psq -> execute();
-				$row = $psq -> rowCount();
-				echo $row;
+				while ($linha = $psq ->fetch(PDO::FETCH_ASSOC) ) {
+					?>
+						<div class="col-md-12">							
+							<div class="col-md-3">
+							<!-- IMagem em Destaque -->
+								 <img class="ImgBook" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>" data-toggle="tooltip" data-placement="right" title=" <?php echo $linha['nome'] ?>"/> 
+							</div>
+							<div class="col-md-9">
+								<!-- Título -->
+								<h4 class="TituloBook" class="text-center"> 
+									<a href="../book.php?liv=<?php echo $linha["id"]; ?>">
+										<?php echo $linha['nome']; ?>
+									</a>
+								</h4>
+								<!-- FIM TITULO -->
+							<!-- Descricao e download link -->
+								<p class="DescrBook">
+									<?php echo $linha['descricao']; ?>
+								</p>
+								<p class="text-left" class="TestoCategoria"><i>Categorias:</i> <?php echo $linha['categoria']; ?> </p>
+							</div>
+						</div>
+					<?php
+				}
+			}else
+				echo "Nada Encontrado";
 			 ?>
+
 		</section>
 		<aside class="col-md-2">
 		<h3 class="text-center">Categorias</h3><hr style="margin-top: 0;" />
