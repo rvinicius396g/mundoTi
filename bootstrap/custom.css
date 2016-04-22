@@ -121,7 +121,12 @@
 			text-indent: 20px;
 			margin-top: 0;
 		}
-/* FIM DA PAGINA LIVRO*/
+/* SEÇÃO DE MAIS VISTOS - DA SIDEBAR*/
+	.imgMaisVisto{
+		height:120px;
+		margin-left:25px;
+		margin-bottom:5px;
+	}
 	/* Estilo do botão de download  */
 .areDownload{
 	padding-left:0;

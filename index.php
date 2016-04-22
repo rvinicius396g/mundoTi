@@ -49,6 +49,12 @@
 		     return i;
 		 }
 	 </script>
+	 <!-- SCRIPT PARA O TOOLTIP -->
+	 <script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
 	 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<title>Home</title>

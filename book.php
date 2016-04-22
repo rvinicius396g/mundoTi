@@ -83,17 +83,9 @@
 						echo "<a class='btn btn-default' href='book.php?catbook=$lcategoria'>".$lcategoria."</a><br/>";
 					}
 				
-				// LIVROS MAIS VISTOS
-				echo "<h3 class='text-center' style='margin-bottom:5px;'>Mais Vistos</h3><br/>";
-						$moreviews = $dbcon->prepare("SELECT * FROM livros ORDER BY views DESC");
-						$moreviews -> execute();
 
-						$mvie = $moreviews->fetchAll(PDO::FETCH_ASSOC);
-							foreach ($mvie as $maisVistas) {
-								echo $maisVistas["nome"]."<br/>";
-							}
 				
-			?>
+			?>				
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
 			
