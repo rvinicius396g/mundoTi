@@ -96,42 +96,46 @@
 			?>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
-			<h3 class="text-center">Livros para Download - Gratuito</h3>
-
-			<hr>
+			
 			<?php
 				if (isset($_GET['catbook'])) {
 						$cat = $_GET['catbook'];
-						$sb = $dbcon->prepare("SELECT * FROM livros WHERE categoria = $cat");
+						$sb = $dbcon->prepare("SELECT * FROM livros WHERE categoria = :catlivro");
+						$sb->bindValue(":catlivro",$cat);
 						$sb-> execute();
-							
-					while ($lcat = $sb->fetch(PDO::FETCH_ASSOC )) { 
+						$Nsb = $sb->rowCount();				 
+
+					?>
+				<h3 class="text-center">Categ.<?php echo $cat;?>  </small><span><small><?php echo $Nsb; ?></small></span></h3>
+				<hr/>
+
+				<?php	
+					while ($linha = $sb->fetch(PDO::FETCH_ASSOC )) { 
 
 					?>
 						<div class="col-md-12">							
 							<div class="col-md-3">
 							<!-- IMagem em Destaque -->
-								 <img class="ImgBook" src="<?php echo $lcat['img'];  ?>" alt=" <?php echo $lcat['nome'];?>" data-toggle="tooltip" data-placement="right" title=" <?php echo $lcat['nome'] ?>"/> 
+								 <img class="ImgBook" src="<?php echo $linha['img'];  ?>" alt=" <?php echo $linha['nome'];?>" data-toggle="tooltip" data-placement="right" title=" <?php echo $linha['nome'] ?>"/> 
 							</div>
 							<div class="col-md-9">
 								<!-- Título -->
 								<h4 class="TituloBook" class="text-center"> 
-									<a href="book.php?liv=<?php echo $lcat["id"]; ?>">
-										<?php echo $lcat['nome']; ?>
+									<a href="book.php?liv=<?php echo $linha["id"]; ?>">
+										<?php echo $linha['nome']; ?>
 									</a>
 								</h4>
 								<!-- FIM TITULO -->
 							<!-- Descricao e download link -->
 								<p class="DescrBook">
-									<?php echo $lcat['descricao']; ?>
+									<?php echo $linha['descricao']; ?>
 								</p>
-								<p class="text-left" class="TestoCategoria"><i>Categorias:</i> <?php echo $lcat['categoria']; ?> </p>
+								<p class="text-left" class="TestoCategoria"><i>Categorias:</i> <?php echo $linha['categoria']; ?> </p>
 							</div>
 						</div>
 					<?php
-					} //Fim WHILE
-
-				}elseif (isset($_GET['liv'])) {
+					} //Fim WHILE			
+				}elseif ( isset($_GET['liv']) ) {
 						$id = $_GET['liv'];
 						// Pesquisa do respectivo conteudo, clicado
 						$lcont = $dbcon->prepare("SELECT * FROM livros WHERE id = :ident");
@@ -201,6 +205,11 @@
 				<?php
 
 				}else{
+					?>
+					<h3 class="text-center">Livros para Download - Gratuito</h3>
+
+					<hr/>
+					<?php
 					$busc = $dbcon->prepare("SELECT  *  FROM  livros");
 					$busc -> execute();
 					
