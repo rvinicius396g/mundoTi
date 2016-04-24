@@ -168,7 +168,7 @@
 					</p>
 					<div class="col-md-12 areDownload">
 						<h4 class="text-center"><u>Download</u></h4>
-						<a href="<?php echo $cont['download'];?>" class="" data-toggle="tooltip" data-placement="bottom" title="Click to Download!">
+						<a class="AraimgDownloadIcon" href="<?php echo $cont['download'];?>" class="" data-toggle="tooltip" data-placement="bottom" title="Click to Download!">
 							<img src="img/mega-cloud-icon.png" alt="Mega" class="imgDownloadIcon">
 						</a>
 					</div>
