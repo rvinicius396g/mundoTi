@@ -15,7 +15,13 @@
 										
 					<li class="area_tit_menu_nav"><a class="tit_menu_nav" href="p/about.php">Sobre</a></li>
 					<li class="area_tit_menu_nav"><a class="tit_menu_nav" href="p/contact.php">Contato</a></li>
+					<li class="area_tit_menu_nav"><a class="tit_menu_nav" href="p/download.php" data-placement="bottom" data-toggle="tooltip" title="Livros/Softwares..">Download</a></li>
+					
 
+						<!--<ul class="dropdown-menu">
+							<li><a href="#">Livros</a></li>
+						</ul>-->
+					</li>
 				</ul>
 				<div class="box_bucs">
 					<form action="p/search.php" method="get">

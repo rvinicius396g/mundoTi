@@ -17,17 +17,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 	<!-- CSS Modificado -->
 	<link rel="stylesheet" href="bootstrap/custom.css">
-	<!-- Script do ADF 
-	
-	<script type="text/javascript"> 
-    var adfly_id = 12478773; 
-    var adfly_advert = 'int'; 
-    var frequency_cap = 5; 
-    var frequency_delay = 5; 
-    var init_delay = 3; 
-    var popunder = true; 
-	</script> 
-	<script src="https://cdn.adf.ly/js/entry.js"></script> -->
+
 	<!-- Script do horario -->
 	 	 <script type="text/javascript">
 		 function startTime() {
@@ -49,13 +39,13 @@
 		     return i;
 		 }
 	 </script>
-	 <!-- SCRIPT PARA O TOOLTIP -->
+	<!-- SCRIPT PARA O TOOLTIP -->
 	 <script>
 		$(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip();
 		});
 	</script>
-	 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<title>Home</title>
 </head>
@@ -74,10 +64,7 @@
 		</div>
 		<!-- Barra lateral -->
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;">
-		<h3 class="text-center">Categorias</h3><hr style="margin-top: 0;" />
-			<?php 
-				include("aside.php");
-			?>
+		
 		</aside>
 		<!-- Conteudo -->
 		<article class="col-md-10 col-md-pull-2" style="padding:0;">
