@@ -83,13 +83,27 @@
 
 				if (isset($_GET['download'])) {
 					$identificao = $_GET['download'];
-					$stm = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id WHERE files.id = '.$identificao.'");
-					$stm -> execute();
 
-					$row = $stm->fetch(PDO::FETCH_ASSOC);
+			$STM = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id WHERE files.id = :id ");
+					$STM ->bindValue(":id",$identificao,PDO::PARAM_STR);
+					$STM -> execute();
 
-					echo $row['nome'];
+					$count = $STM->rowCount();
+					echo $count;
+					$row = $STM -> fetch(PDO::FETCH_ASSOC);
+					?>
+					<img class="col-md-3 ImgBook" src="<?php echo $row['img']; ?>"  alt="">
+					<article class="col-md-9">
+						<h2 class="text-center"> <?php echo $row['nome']; ?></h2><br/>
+						<p class="DescrBook">
+							<?php echo$row['descricao']; ?>
+						</p>
+						<p class="TestoCategoria">Categoria: <?php echo $row['categoria'] ?></p>
+						<p class="TestoCategoria">Tag: <?php echo $row['tag']; ?></p>
+						<hr/>
 
+					</article>
+					<?php
 				}
 			?>
 		</article>

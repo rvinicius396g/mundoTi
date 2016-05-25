@@ -123,12 +123,7 @@
 		text-indent:16px;
 		font-size:13pt;
 	}
-		.descricao_detalhes{
-			font-size:13pt;
-			text-align: justify;
-			text-indent: 20px;
-			margin-top: 0;
-		}
+
 /* SEÇÃO DE MAIS VISTOS - DA SIDEBAR*/
 	.imgMaisVisto{
 		height:120px;
