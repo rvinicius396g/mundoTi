@@ -89,12 +89,18 @@
 		font-style: 'comic sans ms';
 	}
 /*		 FIM FOOOTER 		*/
-/*	ESTILOS DA PAGINA LIVROS */
+/*	ESTILOS DA PAGINA DOWNLOAD */
+.area_files{
+	/* padding:0; */
+	/* margin:0; */
+
+}
 	.ImgBook{
+		padding-left:0;
 		width:115px;
 		height:150px;
 		display:block;
-		margin:auto;
+		/* margin:auto; */
 		margin-bottom:5px;
 		padding-right:0;
 	}
@@ -104,7 +110,9 @@
 			margin: auto;
 		}
 	.TituloBook{
-		text-transform:uppercase;
+		/* text-transform:uppercase; */
+		font-family: "Times New Roman";
+		font-size: 17pt;
 	}
 	.TestoCategoria{
 		text-transform:uppercase;
@@ -128,17 +136,3 @@
 		margin-bottom:5px;
 	}
 	/* Estilo do botão de download  */
-.areDownload{
-	padding-left:0;
-	padding-right:0;
-	height:125px;
-	/* background-image: url("../img/download_area.png");
-	background-repeat:no-repeat; */
-}
-.imgDownloadIcon{
-	height:70px;
-	
-}
-		.AraimgDownloadIcon{
-			margin-left: 55px;
-		}

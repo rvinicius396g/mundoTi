@@ -52,10 +52,46 @@
 			include("pnav.php");
 		?>
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;margin-top: 71px;">
-			
+			<!-- SEÇÃO DA BARRA LATERAL (DIREITA) -->
+			<h4 class="text-center">Test!</h4>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;margin-top: 71px;">
-			
+
+			<?php 
+				$list = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id");
+				$list->execute();
+				// Se Ninguem clicou no nome, mostrar tudo !
+				if(!isset($_GET['download'])){
+					echo "<h2 class='text-center'>Mais recentes</h2><hr/>";
+				
+				while ($posts = $list->fetch(PDO::FETCH_ASSOC)) {
+				?>
+				<section class="area_files col-md-12">
+					<img class="col-md-3 ImgBook" src="<?php echo $posts['img']; ?>"  alt="">
+					<article class="col-md-9">
+						<h3 class="text-center TituloBook">
+						<!-- Link para o post e outras informações -->
+							<a href="download.php?download=<?php echo $posts['id']; ?>"><?php echo $posts['nome'];?></a>
+						<h3><br/>
+
+						<p><b>Categoria:</b> <?php echo $posts['categoria']; ?></p>
+					</article>
+				</section>
+				<?php
+				}
+				}
+
+				if (isset($_GET['download'])) {
+					$identificao = $_GET['download'];
+					$stm = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id WHERE files.id = '.$identificao.'");
+					$stm -> execute();
+
+					$row = $stm->fetch(PDO::FETCH_ASSOC);
+
+					echo $row['nome'];
+
+				}
+			?>
 		</article>
 
 		<footer class="col-md-12 footer_secao">
