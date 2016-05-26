@@ -53,7 +53,8 @@
 <body>
 		<?php include("pnav.php"); 
 			$pchave = $_GET['textsearch'];
-			$psq = $dbcon-> prepare("SELECT *  FROM livros WHERE nome LIKE '%$pchave%' ");
+							// prepare("SELECT *  FROM files WHERE nome LIKE '%$pchave%' ");
+			$psq = $dbcon-> prepare("SELECT *  FROM files WHERE nome LIKE '%$pchave%' ");
 			$psq -> execute();
 			$row = $psq -> rowCount();
 			// echo $row;
@@ -77,15 +78,15 @@
 							<div class="col-md-9">
 								<!-- Título -->
 								<h4 class="TituloBook" class="text-center"> 
-									<a href="../book.php?liv=<?php echo $linha["id"]; ?>">
+									<a href="download.php?download=<?php echo $linha["id"]; ?>">
 										<?php echo $linha['nome']; ?>
 									</a>
 								</h4>
 								<!-- FIM TITULO -->
 							<!-- Descricao e download link -->
-								<p class="DescrBook">
-									<?php echo $linha['descricao']; ?>
-								</p>
+								<!-- <p class="DescrBook">
+									<?php// echo $linha['descricao']; ?>
+								</p> -->
 								<p class="text-left" class="TestoCategoria"><i>Categorias:</i> <?php echo $linha['categoria']; ?> </p>
 							</div>
 						</div>

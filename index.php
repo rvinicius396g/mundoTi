@@ -10,6 +10,8 @@
 <html lang="pt-br">
 <head>
 	<!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta charset="UTF-8">
 	<script src="bootstrap/js/jquery.min.js"></script>
@@ -17,6 +19,8 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 	<!-- CSS Modificado -->
 	<link rel="stylesheet" href="bootstrap/custom.css">
+	<meta name="description" content="Video Tutoriais para a área de T.I, juntamente com uma game de livros e softwares (gratuitos) disponiveis para download!">
+    <meta name="author" content="Roberto Vinicius\Skype: robertoviniciusdasilva">
 
 	<!-- Script do horario -->
 	 	 <script type="text/javascript">

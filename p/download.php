@@ -9,6 +9,8 @@
 	<!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta charset="UTF-8">
+	<meta name="description" content="Video Tutoriais para a área de T.I, juntamente com uma game de livros e softwares (gratuitos) disponiveis para download!">
+    <meta name="author" content="Roberto Vinicius\Skype: robertoviniciusdasilva">
 	<script src="../bootstrap/js/jquery.min.js"></script>
  		<script src="../bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
@@ -47,6 +49,16 @@
 	<title>Home</title>
 </head>
 <body>
+	<!-- FACEBOOK COMENTARIO -->
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1593133810998079";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+	<!--  -->
 	<div class="container-fluid" style="padding:0;">
 		<?php
 			include("pnav.php");
@@ -80,7 +92,7 @@
 				<?php
 				}
 				}
-
+				// Se a pessoa tiver acessado o post
 				if (isset($_GET['download'])) {
 					$identificao = $_GET['download'];
 
@@ -89,18 +101,30 @@
 					$STM -> execute();
 
 					$count = $STM->rowCount();
-					echo $count;
+					//echo $count;
 					$row = $STM -> fetch(PDO::FETCH_ASSOC);
 					?>
 					<img class="col-md-3 ImgBook" src="<?php echo $row['img']; ?>"  alt="">
 					<article class="col-md-9">
-						<h2 class="text-center"> <?php echo $row['nome']; ?></h2><br/>
+						<h2 class="text-center"> <?php echo $row['nome']; ?></h2>
+						<!-- Botão de Like -->
+						<div
+						  class="fb-like"
+						  data-share="true"
+						  data-width="450"
+						  data-show-faces="true">
+						</div>
+						<!--  -->
+						<br/>
 						<p class="DescrBook">
 							<?php echo$row['descricao']; ?>
 						</p>
 						<p class="TestoCategoria">Categoria: <?php echo $row['categoria'] ?></p>
 						<p class="TestoCategoria">Tag: <?php echo $row['tag']; ?></p>
 						<hr/>
+						<!-- COMENTARIO -->
+							<div class="fb-comments" data-href="http://mundoti.site88.net/p/download.php?download=1" data-width="100%" data-numposts="5"></div>
+						<!--  -->
 
 					</article>
 					<?php
