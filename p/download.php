@@ -73,6 +73,7 @@
 				$list = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id");
 				$list->execute();
 				// Se Ninguem clicou no nome, mostrar tudo !
+				
 				if(!isset($_GET['download'])){
 					echo "<h2 class='text-center'>Mais recentes</h2><hr/>";
 				
@@ -129,6 +130,7 @@
 					</article>
 					<?php
 				}
+				
 			?>
 		</article>
 
