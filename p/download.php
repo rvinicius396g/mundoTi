@@ -73,31 +73,55 @@
 				$list = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id");
 				$list->execute();
 				// Se Ninguem clicou no nome, mostrar tudo !
-				
-				if(!isset($_GET['download'])){
+				if ( isset($_GET["categoria"]) ) {
+					$cat = $_GET["categoria"];
+						$ListCategoria = $dbcon -> prepare("SELECT * FROM files WHERE categoria = :Cat");
+						$ListCategoria -> bindValue(":Cat",$cat,PDO::PARAM_STR);
+						$ListCategoria -> execute();
+						while ($CatList = $ListCategoria->fetch(PDO::FETCH_ASSOC)) {
+							?>
+								<section class="area_files col-md-12">
+									<img class="col-md-3 ImgBook" src="<?php echo $CatList['img']; ?>"  alt="">
+								<article class="col-md-9">
+									<h3 class="text-center TituloBook">
+									<!-- Link para o post e outras informações -->
+										<a href="download.php?down=<?php echo $CatList['id']; ?>"><?php echo $CatList['nome'];?></a>
+									<h3>
+									<br/>
+									<p><b>Categoria:</b> <?php echo $CatList['categoria']; ?></p>
+								</article>
+							</section>
+							<?php
+						}
+
+						
+				}
+				// EXIBIÇÃO DE TD DOWNLOAD
+				if( !isset($_GET['down']) && !isset($_GET["categoria"]) ){
 					echo "<h2 class='text-center'>Mais recentes</h2><hr/>";
 				
-				while ($posts = $list->fetch(PDO::FETCH_ASSOC)) {
-				?>
-				<section class="area_files col-md-12">
-					<img class="col-md-3 ImgBook" src="<?php echo $posts['img']; ?>"  alt="">
-					<article class="col-md-9">
-						<h3 class="text-center TituloBook">
-						<!-- Link para o post e outras informações -->
-							<a href="download.php?download=<?php echo $posts['id']; ?>"><?php echo $posts['nome'];?></a>
-						<h3><br/>
+					while ($posts = $list->fetch(PDO::FETCH_ASSOC)) {
+					?>
+					<section class="area_files col-md-12">
+						<img class="col-md-3 ImgBook" src="<?php echo $posts['img']; ?>"  alt="">
+						<article class="col-md-9">
+							<h3 class="text-center TituloBook">
+							<!-- Link para o post e outras informações -->
+								<a href="download.php?down=<?php echo $posts['id']; ?>"><?php echo $posts['nome'];?></a>
+							<h3><br/>
 
-						<p><b>Categoria:</b> <?php echo $posts['categoria']; ?></p>
-					</article>
-				</section>
-				<?php
+							<p><b>Categoria:</b> <?php echo $posts['categoria']; ?></p>
+						</article>
+					</section>
+					<?php
+					}
 				}
-				}
-				// Se a pessoa tiver acessado o post
-				if (isset($_GET['download'])) {
-					$identificao = $_GET['download'];
 
-			$STM = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id WHERE files.id = :id ");
+				// Se a pessoa tiver acessado o post (VISUALIZACAO)
+				if ( isset($_GET['down']) ) {
+					$identificao = $_GET['down'];
+
+					$STM = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id WHERE files.id = :id ");
 					$STM ->bindValue(":id",$identificao,PDO::PARAM_STR);
 					$STM -> execute();
 
@@ -124,13 +148,14 @@
 						<p class="TestoCategoria">Tag: <?php echo $row['tag']; ?></p>
 						<hr/>
 						<!-- COMENTARIO -->
-							<div class="fb-comments" data-href="http://mundoti.site88.net/p/download.php?download=1" data-width="100%" data-numposts="5"></div>
+							<div class="fb-comments" data-href="http://mundoti.site88.net/p/download.php?down=1" data-width="100%" data-numposts="5"></div>
 						<!--  -->
 
 					</article>
 					<?php
 				}
-				
+				// 
+
 			?>
 		</article>
 

@@ -12,8 +12,8 @@
 		margin-bottom:0;
 	}
 	.bnavega{
-		background-image: url("../img/img_theme/images/nav_background_01.png");
-		height:75px;
+		/* background-color:gray; */
+		padding:10px;
 		border: 0;
 	}
 		.area_logo{

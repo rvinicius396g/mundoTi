@@ -1,37 +1,37 @@
 <section class="col-md-12" style="margin-top:30px;">	
 	<div class="col-md-4 Box_Imagens">
-		<img src="img/bootstrap3_3.jpg"  alt="BootStrap 3 Tutorial, passo a passo" class="img-circle imgindex">
-		<h2>BootStrap3</h2>
-		<!-- Descrição -->
-		<p class="box_descricao">Tutorial passo a passo para desenvolver um site totalmente responsivo, para qualquer dispositivo móvel</p>
-		<!-- Botão LINK -->
-		<p><a href="index.php?cont=bootstrap" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a></p>
+		<!-- BOOTSTRAP SECTION -->
+		<img src="img/bootstrap3_3.jpg"  alt="BootStrap 3 Tutorial, passo a passo" class="img-circle imgindex"/>
+		<h2>BootStrap3</h2>		
+		<p class="box_descricao"><!-- Descrição -->
+			Tutorial passo a passo para desenvolver um site totalmente responsivo, para qualquer dispositivo móvel
+		</p>
+		<p>	<!-- Botão LINK -->
+			<a href="p/post.php?cont=bootstrap" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a>
+		</p>
 	</div>
+	<!-- JAVASCRIPT SECTION -->
 	<div class="col-md-4 Box_Imagens">
-		<img src="http://www.phoenixstudios.co.uk/blog/wp-content/uploads/2011/04/css3.jpg"  alt="CSS3 Tutorial, simples" class="img-circle imgindex">
-		<h2>CSS3</h2>
-		<!-- Descrição -->
-		<p class="box_descricao">Conceito básico do que é o CSS (Folhas de Estilo em Cascata) na prática e teoria, proporcionando um bom aprendizado.</p>
-		<!-- Botão LINK -->
-		<p><a href="index.php?cont=css3" class="btn btn-default bot_detalhes" onclick="window.alert('Manutençao');" role="button">Ver Detalhes..</a></p>
+		<img src="img/js.png"  alt="JavaScript" class="img-circle imgindex"/>
+		<h2>JavaScript</h2>		
+		<p class="box_descricao"><!-- Descrição -->
+			Aprenda JavaScript juntamente com na Prática.
+		</p>
+		<p>	<!-- Botão LINK -->
+			<a href="p/post.php?cont=js" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a>
+		</p>
 	</div>
+	<!-- Git Github Section -->
 	<div class="col-md-4 Box_Imagens">
-		<img src="img/javascript.png"  alt="JavaScript tutorial, ensinando o conteito e como o utilizar" class="img-circle imgindex">
-		<h2>JavaScript</h2>
-		<!-- Descrição -->
-		<p class="box_descricao">Introdução ao JS, explicando o seu conceito e como o utilizar, utilizando exercícios de lógica de forma a proporcionar uma fixação do conteúdo.</p>
-		<!-- Botão LINK -->
-		<p><a href="index.php?cont=js" class="btn btn-default bot_detalhes" role="button" onclick="window.alert('Manutençao');">Ver Detalhes..</a></p>
+		<img src="img/Aquicon-Github.png"  alt="Git e GitHub" class="img-circle imgindex"/>
+		<h2>Git e GitHub</h2>		
+		<p class="box_descricao"><!-- Descrição -->
+			A forma mais fácil de se aprender Git e GitHub, numa forma descomplicada utilizando o GitHub Desktop!
+		</p>
+		<p>	<!-- Botão LINK -->
+			<a href="p/post.php?cont=git" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a>
+		</p>
 	</div>
-	<hr/>	
-</section>
-<section class="col-md-12">
-	<?php 
-	if (isset($_GET['cont'])) {
-		switch ($_GET['cont']) {
-			case 'bootstrap':include("p/bootstrap3.php");break;
-			case 'css':echo "MANUTENÇÃO";
-		}
-	}
-	?>
+
+
 </section>

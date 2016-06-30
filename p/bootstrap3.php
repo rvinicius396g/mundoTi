@@ -2,10 +2,11 @@
     <a href="#" class="close">&times;</a>
     <strong>Leia!</strong> Para ter acesso aos arquivos, imagens que foram utilizaas nas video aulas, leia a descrição.
   </div>
-
+<img src="../img/bootstrap_top_conteudo.png" class="img-rounded img-responsive" alt="Ilustraçao do BootStrap"/>
 <h3 class="text-center">
 	BootStrap 3 - Desenvolvendo seu site responsivo!
-</h3><br/>
+</h3>
+<br/>
 <p style="text-indent: 35px;font-size: 12pt;text-align: justify;">
 	Olá pessoal, nessa seção de BootStrap sera ensinado na prática como desenvolver um site totalmente responsivo, ou seja, que possa ser acessado por qualquer dispositivo móvel. Nesse exemplo, eu tentarei seguir como base um tema, que eu fiz o download na internet, vai ser um site estático, para fazer download do tema, imagens, e ter acesso aos arquivos que foram criados no decorrer das video aulas.
 </p>
