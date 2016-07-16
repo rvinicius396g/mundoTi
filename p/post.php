@@ -9,29 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta charset="UTF-8">
 
- 
-	<!-- Script do horario -->
-	 	 <script type="text/javascript">
-		 function startTime() {
-		 var today=new Date();
-		 var h=today.getHours();
-		 var m=today.getMinutes();
-		 var s=today.getSeconds();
-		 // add a zero in front of numbers<10
-		 m=checkTime(m);
-		 s=checkTime(s);
-		 document.getElementById('txt').innerHTML="Horário: "+h+":"+m+":"+s;
-		 t=setTimeout('startTime()',500);
-		 }
-
-		 function checkTime(i){
-		 if (i<10) {
-		     i="0" + i;
-		 }
-		     return i;
-		 }
-	 </script>
-
 	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 	<!-- JQuery Biblioteca -->
@@ -42,7 +19,7 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
 	<!-- CSS Modificado -->
 	<link rel="stylesheet" href="../bootstrap/custom.css">
-	<title>		</title>
+	<title>	-=|Mundo Ti|=- </title>
 </head>
 <body>
 		<?php
@@ -58,7 +35,8 @@
 			if (isset($_GET['cont'])) {
 				switch ($_GET['cont']) {
 					case 'bootstrap':include("bootstrap3.php");break;
-					case 'css':echo "MANUTENÇÃO";
+					case 'javascript':include("javascript.php");break;
+					case 'git':include("github.php");
 				}
 			}
 			?>

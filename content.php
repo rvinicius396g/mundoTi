@@ -12,13 +12,13 @@
 	</div>
 	<!-- JAVASCRIPT SECTION -->
 	<div class="col-md-4 Box_Imagens">
-		<img src="img/js.png"  alt="JavaScript" class="img-circle imgindex"/>
+		<img src="img/javascript_logo.png"  alt="JavaScript" class="img-circle imgindex"/>
 		<h2>JavaScript</h2>		
 		<p class="box_descricao"><!-- Descrição -->
-			Aprenda JavaScript juntamente com na Prática.
+			Tutorial para programação de Javascript, com exemplos práticos para uma melhor fixação do conteúdo!
 		</p>
 		<p>	<!-- Botão LINK -->
-			<a href="p/post.php?cont=js" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a>
+			<a href="p/post.php?cont=javascript" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a>
 		</p>
 	</div>
 	<!-- Git Github Section -->
@@ -26,7 +26,7 @@
 		<img src="img/Aquicon-Github.png"  alt="Git e GitHub" class="img-circle imgindex"/>
 		<h2>Git e GitHub</h2>		
 		<p class="box_descricao"><!-- Descrição -->
-			A forma mais fácil de se aprender Git e GitHub, numa forma descomplicada utilizando o GitHub Desktop!
+			A forma mais fácil de se aprender Git e GitHub, sem a necessidade de programar ou usar cógidos com GitHub Desktop.
 		</p>
 		<p>	<!-- Botão LINK -->
 			<a href="p/post.php?cont=git" class="btn btn-default bot_detalhes" role="button" name="bootstrapmore">Ver Detalhes..</a>
