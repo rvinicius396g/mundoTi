@@ -16,27 +16,6 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
 	<!-- CSS Modificado -->
 	<link rel="stylesheet" href="../bootstrap/custom.css">
-	<!-- Script do horario -->
-	 	 <script type="text/javascript">
-		 function startTime() {
-		 var today=new Date();
-		 var h=today.getHours();
-		 var m=today.getMinutes();
-		 var s=today.getSeconds();
-		 // add a zero in front of numbers<10
-		 m=checkTime(m);
-		 s=checkTime(s);
-		 document.getElementById('txt').innerHTML="Horário: "+h+":"+m+":"+s;
-		 t=setTimeout('startTime()',500);
-		 }
-
-		 function checkTime(i){
-		 if (i<10) {
-		     i="0" + i;
-		 }
-		     return i;
-		 }
-	 </script>
 	 <!-- Inicialização do Tooltip  -->
 		<script>
 		$(document).ready(function(){
@@ -70,7 +49,7 @@
 		<article class="col-md-10 col-md-pull-2" style="padding:0;margin-top: 71px;">
 
 			<?php 
-				$list = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id");
+				$list = $dbcon->prepare("SELECT * FROM files ");
 				$list->execute();
 				// Se Ninguem clicou no nome, mostrar tudo !
 				if ( isset($_GET["categoria"]) ) {
@@ -121,15 +100,15 @@
 				if ( isset($_GET['down']) ) {
 					$identificao = $_GET['down'];
 
-					$STM = $dbcon->prepare("SELECT * FROM files INNER JOIN download ON files.id = download.id WHERE files.id = :id ");
-					$STM ->bindValue(":id",$identificao,PDO::PARAM_STR);
+					$STM = $dbcon->prepare("SELECT * FROM files WHERE id =  :ide");
+					$STM->bindValue(":ide",$_GET['down']);
 					$STM -> execute();
 
 					$count = $STM->rowCount();
 					//echo $count;
 					$row = $STM -> fetch(PDO::FETCH_ASSOC);
 					?>
-					<img class="col-md-3 ImgBook" src="<?php echo $row['img']; ?>"  alt="">
+					<img class="col-md-3 ImgAcess" src="<?php echo $row['img']; ?>"  alt="">
 					<article class="col-md-9">
 						<h2 class="text-center"> <?php echo $row['nome']; ?></h2>
 						<!-- Botão de Like -->
@@ -148,7 +127,7 @@
 						<p class="TestoCategoria">Tag: <?php echo $row['tag']; ?></p>
 						<hr/>
 						<!-- COMENTARIO -->
-							<div class="fb-comments" data-href="http://mundoti.site88.net/p/download.php?down=1" data-width="100%" data-numposts="5"></div>
+							<div class="fb-comments" data-href="mundoti.site88.net/p/download.php?down=<?php echo $row['id'];?>" data-width="100%" data-numposts="5"></div>
 						<!--  -->
 
 					</article>
