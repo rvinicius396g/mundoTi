@@ -28,16 +28,7 @@
 	<title>Home</title>
 </head>
 <body>
-	<!-- FACEBOOK COMENTARIO -->
-			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1593133810998079";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
-	<!--  -->
+
 	<div class="container-fluid" style="padding:0;">
 		<?php
 			include("pnav.php");
@@ -126,8 +117,18 @@
 						<p class="TestoCategoria">Categoria: <?php echo $row['categoria'] ?></p>
 						<p class="TestoCategoria">Tag: <?php echo $row['tag']; ?></p>
 						<hr/>
+						<!-- FACEBOOK COMENTARIO -->
+						<div id="fb-root"></div>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1593133810998079";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+						<!--  -->
 						<!-- COMENTARIO -->
-							<div class="fb-comments" data-href="mundoti.site88.net/p/download.php?down=<?php echo $row['id'];?>" data-width="100%" data-numposts="5"></div>
+							<div class="fb-comments" data-href="download.php?down=<?php echo $row['id'];?>" data-width="100%" data-numposts="5"></div>
 						<!--  -->
 
 					</article>
