@@ -8,7 +8,7 @@
 	?>
 		<ol class="nav_ind">
 		    <li class="cat_styleList">
-		    	<a class="btn_categoria" href="p/download.php?categoria=<?php echo $cat['categoria'];?>">
+		    	<a class="btn_categoria" href="download.php?categoria=<?php echo $cat['categoria'];?>">
 		    		<?php echo $cat['categoria'];?>
 		    	</a>
 		    </li>

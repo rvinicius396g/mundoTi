@@ -36,13 +36,14 @@
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;margin-top: 71px;">
 			<!-- SEÇÃO DA BARRA LATERAL (DIREITA) -->
 			<h4 class="text-center">Test!</h4>
+			<?php include("pnavbar.php"); ?>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;margin-top: 71px;">
 
 			<?php 
 				$list = $dbcon->prepare("SELECT * FROM files ");
 				$list->execute();
-				// Se Ninguem clicou no nome, mostrar tudo !
+				// SE CLICADO NAS CATEGORIAS
 				if ( isset($_GET["categoria"]) ) {
 					$cat = $_GET["categoria"];
 						$ListCategoria = $dbcon -> prepare("SELECT * FROM files WHERE categoria = :Cat");
@@ -55,7 +56,9 @@
 								<article class="col-md-9">
 									<h3 class="text-center TituloBook">
 									<!-- Link para o post e outras informações -->
-										<a href="download.php?down=<?php echo $CatList['id']; ?>"><?php echo $CatList['nome'];?></a>
+										<a class="TituloBookLink" href="download.php?down=<?php echo $CatList['id'];?>">
+											<?php echo $CatList['nome'];?>
+										</a>
 									<h3>
 									<br/>
 									<p><b>Categoria:</b> <?php echo $CatList['categoria']; ?></p>
@@ -77,7 +80,7 @@
 						<article class="col-md-9">
 							<h3 class="text-center TituloBook">
 							<!-- Link para o post e outras informações -->
-								<a href="download.php?down=<?php echo $posts['id']; ?>"><?php echo $posts['nome'];?></a>
+								<a class="TituloBookLink" href="download.php?down=<?php echo $posts['id']; ?>"><?php echo $posts['nome'];?></a>
 							<h3><br/>
 
 							<p><b>Categoria:</b> <?php echo $posts['categoria']; ?></p>
@@ -99,7 +102,7 @@
 					//echo $count;
 					$row = $STM -> fetch(PDO::FETCH_ASSOC);
 					?>
-					<img class="col-md-3 ImgAcess" src="<?php echo $row['img']; ?>"  alt="">
+					<img class="col-md-3 ImgAcess img-responsive" src="<?php echo $row['img']; ?>"  alt="">
 					<article class="col-md-9">
 						<h2 class="text-center"> <?php echo $row['nome']; ?></h2>
 						<!-- Botão de Like -->
@@ -117,6 +120,25 @@
 						<p class="TestoCategoria">Categoria: <?php echo $row['categoria'] ?></p>
 						<p class="TestoCategoria">Tag: <?php echo $row['tag']; ?></p>
 						<hr/>
+						<?php 
+							printf("<h5><marquee>Download Link's</marquee></h5>");
+							if (!empty($row['mega'])) {
+								echo "<a class='Down_area' href='".$row["mega"]."'>
+									<img class='Down_img' src='http://i67.tinypic.com/4j56pj.jpg' alt='Download Mega'>
+								</a>";
+							}
+							if (!empty($row['mediafire'])) {
+								echo "<a class='Down_area' href='".$row["mediafire"]."'>
+									<img class='Down_img' src='http://i65.tinypic.com/6gfmo5.jpg' alt='Mediafire Download'>
+								</a>";
+							}
+							if (!empty($row['utorrent'])) {
+								echo "<a class='Down_area' href='".$row["utorrent"]."'>
+									<img class='Down_img' src='http://i64.tinypic.com/64h5lh.jpg' alt='Utorrent Download'>
+								</a>";
+							}
+
+						?>
 						<!-- FACEBOOK COMENTARIO -->
 						<div id="fb-root"></div>
 						<script>(function(d, s, id) {

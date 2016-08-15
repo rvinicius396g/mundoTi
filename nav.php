@@ -16,12 +16,12 @@
 		<li class="area_tit_menu_nav"><a class="tit_menu_nav" href="p/contact.php">Contato</a></li>
 		<li class="area_tit_menu_nav"><a class="tit_menu_nav" href="p/download.php" data-placement="bottom" data-toggle="tooltip" title="Livros/Softwares..">Download</a></li>
       </ul>
-		<div class="box_bucs">
-			<form action="p/search.php" method="get">
+
+			<form action="p/search.php" method="get" class="box_bucs">
 				<input class="boxtest" type="text"  name="textsearch" placeholder="Search ..." required>
-				<input class="btnPesquisa" type="image" name="Btnsearch" src="img/img_theme/images/search_09.jpg">
+				<input class="btnPesquisa" type="image" name="Btnsearch" src="http://www.iconarchive.com/download/i76409/rafiqul-hassan/blogger/Search.ico">
 			</form>
-		</div>
+
     </div>
   </div>
 </nav>

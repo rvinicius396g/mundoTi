@@ -34,19 +34,21 @@
 			margin-left: 40px;
 		}
 		.box_bucs{ /*	Posição do form para menu de pesquisa!	*/
-			margin-top:19px;
+			/* margin-top:15px; */
+			padding: 0;
 			float:right;
 		}
 			.boxtest{  /* Entrada de dados para buscas !*/
-				border: 2px #000;
+				/* border: 2px; */
 				border-radius: 7px;				
 				width: 235px;
 				height: 30px;
 			}
 			.btnPesquisa{
-				/*height:30px;*/
+				height:37px;
+				/* padding-top: 22px; */
 			}
-/*	SEÇÃO AS IMAGENS DO INDEX*/
+/*						SEÇÃO AS IMAGENS DO z-index: 			*/
 	.imgindex{ /* Imagem do conteudo principal- abaixo do slids*/
 		height: 140px;
 		width: 140px;
@@ -60,23 +62,33 @@
 	.box_descricao{  /*Descrição dos conteudos principais*/
 		font-size: 14px;
 	}
+			.bot_detalhes{ /*	Botão para detalhes	*/	
+			    color: #333;
+			    background-color: #87CEFA;
+			    border-color: #7FFFD4;
+			}
+			.bot_detalhes:hover{ /*	Botão para detalhes	*/	
+			    color: #333;
+			    background-color: #1E90FF;
+			    border-color: #87CEFA;
+			}
 /*	FIM DAS SECOES DAS IMAGENS*/
-/* SEÇÃO DO CAROUSEL */
+							/* 		SEÇÃO DO CAROUSEL 				*/
 	.carouselarea{
 		margin-top: 76px;
 	}
 
 	 .imgOfCarousel{ 
 		margin:auto;
-		 /* width: 100%; */
-		height: 200px;
+		width: 100%;
+		height: 468px;
 	}
 	/*
 	.fundo_d_imagensCarousel{
 		background-color: black;
 	}
 /* FIM DO CAROUSEL*/
-/*		 FOOOTER SECAO 		*/
+							/*			 FOOOTER SECAO 			*/
 	.iconFoter{
 		height:64px;
 		margin-right: 15px;
@@ -88,7 +100,7 @@
 		font-style: 'comic sans ms';
 	}
 /*		 FIM FOOOTER 		*/
-/*	ESTILOS DA PAGINA DOWNLOAD */
+						/*	ESTILOS DA PAGINA DOWNLOAD */
 .area_files{
 	/* padding:0; */
 	/* margin:0; */
@@ -116,6 +128,15 @@
 		font-family: "Times New Roman";
 		font-size: 17pt;
 	}
+			.TituloBookLink{
+				color: black;
+
+			}
+			.TituloBookLink:hover{
+				color: black;
+				text-decoration: none;
+				font-weight: bold;
+			}
 	.TestoCategoria{
 		text-transform:uppercase;
 	}
@@ -125,8 +146,18 @@
 		text-indent:16px;
 		font-size:13pt;
 	}
+	.Down_area{
+		margin-right: 30px;
+	}
+				.Down_img{
+					height:35px;
+				}
 
-/* SEÇÃO DA SIDEBAR*/
+								/* SEÇÃO DA SIDEBAR*/
+	.nav_ind{
+			margin:0;
+			padding-left:0px;
+		}
 	.sidebarArea{
 		padding:0;
 		margin:0;

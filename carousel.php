@@ -12,11 +12,11 @@
 	<div class="carousel-inner" role="listbox">
 		<!-- Primeira imagem do Slide -->
 		<div class="item active">
-			<img class="imgOfCarousel" src="img/slidshow01.png" alt="primeiro"/>
+			<img class="imgOfCarousel" src="img/banner01.png" alt="Imgprimeiro"/>
 			<!-- Título do Slide -->
 			<div class="carousel-caption">
 				<h3>Mundo Ti</h3>
-					<p>Seja Bem Vindo!</p>
+					<p>Pelo uTorrent,Mega,Mediafire,etc..</p>
 			</div>
 			<!-- Fim do Título -->
 		</div>
@@ -24,24 +24,24 @@
 
 		<!-- Segunda Imagem do Slide -->
 		<div class="item">
-			<img class="imgOfCarousel" src="img/slidshow02.png" alt="segundo"/>
+			<img class="imgOfCarousel" src="img/banner02.png" alt="Imgsegundo"/>
 			<!-- Título do Slide -->
 			<div class="carousel-caption">
-				<h3>Livros sobre Ti</h3>
-					<p>Tenha acesso a milhares de livros gratuitos !</p>
+				<h3>Mundo Ti</h3>
+					<p>Acesse o nosso Canal no Youtube</p>
 			</div>
 			<!-- Fim do Título -->
 		</div>
 		<!-- Fim da primeira imagem do Slide -->
 
 		<!-- Terceira Imagem do Slide -->
-		<div class="item">
-			<img class="imgOfCarousel" src="img/slidshow03.png" alt="terceira"/>
+		<!-- <div class="item">
+			<img class="imgOfCarousel" src="" alt="Imgterceira"/>
 			<!-- Título do Slide -->
-			<div class="carousel-caption">
+			<!-- <div class="carousel-caption">
 				<h3>Canal do Youtube</h3>
 					<p>Inscreva-se em Nosso Canal, e fique por dentro de tudo que esta por vir!</p>
-			</div>
+			</div> -->
 			<!-- Fim do Título do Slide -->
 		</div>
 		<!-- Fim Terceira Imagem do Slide -->
