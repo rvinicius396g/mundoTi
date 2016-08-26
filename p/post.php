@@ -1,10 +1,14 @@
 <?php 
+	
 	include("../conect.php"); 
 	$dbcon = conexao();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+
+		
 	<!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta charset="UTF-8">

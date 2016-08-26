@@ -1,4 +1,5 @@
 <?php 
+	
 	include("../conect.php"); 
 	$dbcon = conexao();
 ?>
@@ -35,7 +36,6 @@
 		?>
 		<aside class="col-md-2 col-md-push-10" style="border-left:1px solid gray;margin-top: 71px;">
 			<!-- SEÇÃO DA BARRA LATERAL (DIREITA) -->
-			<h4 class="text-center">Test!</h4>
 			<?php include("pnavbar.php"); ?>
 		</aside>
 		<article class="col-md-10 col-md-pull-2" style="padding:0;margin-top: 71px;">

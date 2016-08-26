@@ -1,4 +1,6 @@
-<?php include("../conect.php"); 
+<?php 
+  include("../conect.php"); 
+  include_once ("analyticstracking.php");
 	$dbcon = conexao();
 ?>
 

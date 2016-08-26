@@ -1,5 +1,7 @@
 <?php 
+
 	if (isset($_GET['textsearch'])) {
+		
 		include("../conect.php"); 
 		$dbcon = conexao();
 
