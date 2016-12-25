@@ -52,12 +52,14 @@ function getNameUser($mail){
     <link href="../bootstrap/dashboard.css" rel="stylesheet"/>
 	  <!-- Custom styles for this Log In -->
     <link href="../signin.css" rel="stylesheet"/>
+    <!-- Custom style for DASHBOARD -->
+    <link href="style/dashboard.css" rel="stylesheet"/>
 </head>
 
   <body>
 	<div class="container">
   <?php 
-    if(!isset($_GET['BSend']) && !setcookie()){
+    if(!isset($_GET['BSend']) || !isset($_COOKIE['usuario']) ){
    ?>
       <!-- login -->
       <form action="index.php" method="get" class="form-signin">
@@ -75,17 +77,16 @@ function getNameUser($mail){
       </form><!-- Login END -->
       <?php 
       }          
-      if(isset($_GET['BSend'])){
+      if(isset($_GET['BSend']) || isset($_COOKIE['usuario']) ){
         $mail = $_GET['BMail'];
         $password = $_GET['BPassword'];
-        if( CheckLogin($mail,$password) != 0){
-          $usuario = getNameUser($mail);
-          // echo $usuario;
-          setcookie( 'ADM',$usuario,(time()+(3*24*3600)) );
-        ?>
-          
-        <?php
-        }
+          if( CheckLogin($mail,$password) != 0){
+            $usuario = getNameUser($mail);
+            // echo $usuario;
+            setcookie( 'usuario',$usuario,(time()+(3*24*3600)) );
+            // cookie dura 3 dias time()+(3*24*3600)
+            include("dash.php");
+          }
       }
       ?>
     </div>

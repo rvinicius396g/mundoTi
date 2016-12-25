@@ -1,0 +1,286 @@
+[33mcommit 88893abaa9b8f225c73c7394456ef2b15df1d36e[m
+Author: Roberto Vinicius <roberto396g@hotmail.com>
+Date:   Fri Dec 23 17:53:40 2016 -0200
+
+    arquivo aleatorio, test no guit bash
+
+[33mcommit ea24367e4b0ae20e4c076f3d49c85d1c0273a827[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Fri Aug 26 18:29:44 2016 -0300
+
+    .
+
+[33mcommit 3d5b9088e316a81bd505872c46eff89663ba8661[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Mon Aug 15 12:33:05 2016 -0300
+
+    Content
+
+[33mcommit 3c4deb03ee03fe4494036b6cc377cd27ce690c02[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Thu Aug 4 12:06:21 2016 -0300
+
+    files
+
+[33mcommit daab7bf2599937e9aa71dddb90e004337d7aadbe[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Sun Jul 31 17:44:42 2016 -0300
+
+    content
+
+[33mcommit 246833ef54fc84b2fe8e57c82559da786e8dcc66[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Sat Jul 16 13:33:11 2016 -0300
+
+    content
+
+[33mcommit 4c73e2030e54cf8dc66c55fa67950fbfe92140ac[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Thu Jun 30 17:49:30 2016 -0300
+
+    more content
+    
+    Now there is JS content and Also Git and GitHub content, of course that
+    I need to finish yet.
+
+[33mcommit b509bfe376ec32a388e9b08d5e1c40b7f653e029[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Fri May 27 16:34:36 2016 -0300
+
+    Navbar
+    
+    Navbar, and now I'm creating the list of categories !
+
+[33mcommit e271bcba61b628c108b3029356b642bf5a87fdbb[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Thu May 26 15:36:01 2016 -0300
+
+    New stuff
+    
+    Include now a Dashboard (not configured yet), a reconfigure the
+    search.php, and I insert the painel of login !
+
+[33mcommit ae62dc90fc47af6687d889fa919b8b9769985945[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Wed May 25 15:34:31 2016 -0300
+
+    Script for the download link
+
+[33mcommit 26bdbe836fb94029b4ff8fd1c20378df208c2d8a[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Wed May 25 15:05:09 2016 -0300
+
+    download page
+    
+    Link for the posts, and a script to show all the posts!
+
+[33mcommit 99bec03ad8742ac4ae69067146e39ad0a3e454df[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Wed May 25 12:41:07 2016 -0300
+
+    new page
+    
+    Download now include books, and sofwares
+
+[33mcommit 1b1a18613db7dbb27847f2992c54db9542be7527[m
+Author: Roberto-Vinicius <roberto396g@hotmail.com>
+Date:   Mon May 9 14:22:36 2016 -0300
+
+    db name
+
+[33mcommit eb09e6e386f810b0712332b31756bc46ebd97ffa[m
+Author: rvinicius396g <roberto396g@hotmail.com>
+Date:   Sun Apr 24 12:34:07 2016 -0300
+
+    download icon
+
+[33mcommit 7457f02fd1e8e461d7c4cf38b11f86d7a71a3bb6[m
+Author: rvinicius396g <roberto396g@hotmail.com>
+Date:   Fri Apr 22 17:12:13 2016 -0300
+
+    sidebar
+    
+    I just changed a little of the design and insert a categorie of more
+    viewd
+
+[33mcommit 48a2fa1970bc612b907c3d37cf5295b36c08e8ef[m
+Author: rvinicius396g <roberto396g@hotmail.com>
+Date:   Fri Apr 22 16:12:19 2016 -0300
+
+    most viewd
+
+[33mcommit e787f6238b936810fd204e44bb112b094ad8d374[m
+Author: rvinicius396g <roberto396g@hotmail.com>
+Date:   Thu Apr 21 12:45:44 2016 -0300
+
+    .
+
+[33mcommit ae68fecabbd169b63a81d604ceeb470096868798[m
+Author: rvinicius396g <roberto396g@hotmail.com>
+Date:   Fri Apr 15 15:34:50 2016 -0300
+
+    search script
+    
+    Well here i'm trying to figure out a way to create a box to research
+    using PDO
+
+[33mcommit ecdbf238321f65b16d2145b9f182c598ba0a4685[m
+Author: rvinicius396g <roberto396g@hotmail.com>
+Date:   Wed Apr 13 21:15:24 2016 -0300
+
+    new style
+    
+    I just created a new logo for the web site, and also I changed the css
+    style to the web site
+
+[33mcommit d21c5c4389632df942d2999ab8ec085e0b6a4667[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Apr 3 15:34:44 2016 -0300
+
+    fixed mistakes
+
+[33mcommit 1ac564f22ce9021dc683931a02b65b8179cc29c9[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Apr 3 14:20:50 2016 -0300
+
+    new style
+    
+    new style, fonts, and a box for research !
+
+[33mcommit db0b44906896990bf81aa0e8bf3a95f0d562cc51[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Thu Mar 31 18:19:46 2016 -0300
+
+    new categories
+    
+    most view categorie and also a gadged to show th categories from the
+    books
+
+[33mcommit c70f565740caa131ceead5ccf8f522ae48b85554[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 27 16:39:41 2016 -0300
+
+    script for most view book
+
+[33mcommit 76ca34a4a5d695e460f8920ab8e6f5a887df2981[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 27 16:38:14 2016 -0300
+
+    most view books
+
+[33mcommit 499b4d7ae019a9a2cb3f8b09698d60359d214c9d[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 27 12:45:08 2016 -0300
+
+    js alert
+
+[33mcommit 12bfcc54177f073e63325ad93e9643bb7600602c[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Mon Mar 21 19:50:21 2016 -0300
+
+    align text
+
+[33mcommit e0699c164ddc833f6271d3f8b169b761c266f357[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 20 21:24:58 2016 -0300
+
+    responsive embed
+
+[33mcommit c428654ffe1293fdeeed41478237d42f42151f72[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 20 21:12:08 2016 -0300
+
+    embed book
+    
+    Now I just implement a embed book that everyone can read, before do the
+    download
+
+[33mcommit cbff9edd610b9a173dbde3063159fbd05af4f715[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Mon Mar 14 18:26:04 2016 -0300
+
+    content
+
+[33mcommit 7107dfe7dd041f81a8108abfba9a04737be5275e[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Mon Mar 14 18:02:22 2016 -0300
+
+    script with php
+    
+    So basically I just created a I script, that is going to show all book
+    on my db, now I dont need to pust on by on book and things like that..
+
+[33mcommit 7f87cdb984e6be73ce4cb1fdc3f2c8f695e00e2d[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Mon Mar 7 19:39:20 2016 -0300
+
+    Responsive Embeds
+
+[33mcommit e528063837887588f565c94d42e276959d1db8b1[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 6 18:17:10 2016 -0300
+
+    inserting content
+
+[33mcommit 69f3ca0a10cdc1a2ab9f3fbeacf522458f1a37a6[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 6 18:12:14 2016 -0300
+
+    facebook comment plugin
+
+[33mcommit 41e70bd006f386cc76ba5915799623225553e6e4[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 6 16:56:30 2016 -0300
+
+    insert btn-default
+
+[33mcommit bad835a2da915218e9e8a81a0a949224f68ed368[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 6 16:30:32 2016 -0300
+
+    content
+
+[33mcommit 1d2cd0889f91e03f56fa4f2ed9f92ab1145b70ad[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sun Mar 6 16:23:44 2016 -0300
+
+    insert content
+
+[33mcommit 95233b0c51fb77274664de2742bfe6b5409c1b03[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Fri Mar 4 21:39:09 2016 -0300
+
+    mail function
+
+[33mcommit 2b7cff7f890cdf3bc9d5b8e80e5f24e22dd11fa4[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Wed Mar 2 20:14:35 2016 -0300
+
+    Simple pages
+    
+    Well here I just created the pages contact and About.. Also I added the
+    facebook widget on the website
+
+[33mcommit 3ece5ad45a1ecf38b1ce99f36ffac940caedae86[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Mon Feb 29 15:42:22 2016 -0300
+
+    content and style
+
+[33mcommit 06b3334cf81325d7bce4584abe99456a63ef54c7[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Sat Feb 27 11:34:16 2016 -0300
+
+    pages
+
+[33mcommit bc1ad7ef0e2b73a35ee2b40a8e41a2d27217dee7[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Wed Feb 24 19:41:25 2016 -0300
+
+    website
+
+[33mcommit 56fb5aeab907e7c20eee30f06a14ab18eb13722a[m
+Author: rvinicius <roberto396g@hotmail.com>
+Date:   Wed Feb 24 19:26:21 2016 -0300
+
+    :tada: Added .gitattributes & .gitignore files
