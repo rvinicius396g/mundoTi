@@ -1,9 +1,31 @@
 <?php 
   include("../conect.php"); 
-  include_once ("analyticstracking.php");
+  // include_once ("analyticstracking.php");
 	$dbcon = conexao();
-?>
+function CheckLogin($cmail,$csenha){
+  $datBase = conexao();
+  $stm = $datBase->prepare("SELECT * FROM adm WHERE mail = :Lnome AND pass = :Lpass");
+  $stm->bindValue(":Lnome",$cmail);
+  $stm->bindvalue(":Lpass",$csenha);
+  $stm->execute();
 
+  $stmRow = $stm->rowCount();
+    return $stmRow;
+}
+function CheckCookie(){
+
+}
+function getNameUser($mail){
+  $dbSearch = conexao();
+    $stm = $dbSearch->prepare("SELECT * FROM adm WHERE mail = :Lnome");
+    $stm ->bindValue(":Lnome",$mail);
+    $stm ->execute();
+   $UU = $stm -> fetch(PDO::FETCH_ASSOC);
+    $Nusuario = $UU['nome'];
+
+      return $Nusuario;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,24 +40,27 @@
 
     <title>Login</title>
 
-  <!-- BOotstrap -->
+  <!-- Bootstrap -->
     <script src="../bootstrap/js/jquery.min.js"></script>
  		<script src="../bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
     <!-- Bootstrap core CSS -->
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet"/>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
     <!-- Custom styles for this template -->
-    <link href="../bootstrap/dashboard.css" rel="stylesheet">
-	<!-- Custom styles for this Log In -->
-    <link href="../signin.css" rel="stylesheet">
-  </head>
+    <link href="../bootstrap/dashboard.css" rel="stylesheet"/>
+	  <!-- Custom styles for this Log In -->
+    <link href="../signin.css" rel="stylesheet"/>
+</head>
 
   <body>
 	<div class="container">
-
-      <form action="#" method="get" class="form-signin">
+  <?php 
+    if(!isset($_GET['BSend']) && !setcookie()){
+   ?>
+      <!-- login -->
+      <form action="index.php" method="get" class="form-signin">
         <h2 class="form-signin-heading">Por Favor faça o Login!</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         	<input name="BMail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -43,11 +68,26 @@
         	<input name="BPassword" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Lembrar de Mim
+            <input type="checkbox" value="remember-me">Lembrar de Mim
           </label>
         </div>
         <button name="BSend" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-      </form>
+      </form><!-- Login END -->
+      <?php 
+      }          
+      if(isset($_GET['BSend'])){
+        $mail = $_GET['BMail'];
+        $password = $_GET['BPassword'];
+        if( CheckLogin($mail,$password) != 0){
+          $usuario = getNameUser($mail);
+          // echo $usuario;
+          setcookie( 'ADM',$usuario,(time()+(3*24*3600)) );
+        ?>
+          
+        <?php
+        }
+      }
+      ?>
     </div>
 </body>
 </html>
