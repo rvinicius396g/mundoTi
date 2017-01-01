@@ -59,10 +59,10 @@ function getNameUser($mail){
   <body>
 	<div class="container">
   <?php 
-    if(!isset($_GET['BSend']) || !isset($_COOKIE['usuario']) ){
+    if(!isset($_COOKIE['usuario']) || !isset($_GET['BSend'])){
    ?>
       <!-- login -->
-      <form action="index.php" method="get" class="form-signin">
+      <form method="get" class="form-signin">
         <h2 class="form-signin-heading">Por Favor faça o Login!</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         	<input name="BMail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -76,18 +76,20 @@ function getNameUser($mail){
         <button name="BSend" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       </form><!-- Login END -->
       <?php 
-      }          
-      if(isset($_GET['BSend']) || isset($_COOKIE['usuario']) ){
+      }       
+      if (isset($_GET['BSend']) && isset($_GET['BPassword'])) {
+        # code...
         $mail = $_GET['BMail'];
         $password = $_GET['BPassword'];
           if( CheckLogin($mail,$password) != 0){
             $usuario = getNameUser($mail);
             // echo $usuario;
-            setcookie( 'usuario',$usuario,(time()+(3*24*3600)) );
+            ob_start();
+            setcookie("usuario",$usuario,time()+259200);
             // cookie dura 3 dias time()+(3*24*3600)
-            include("dash.php");
+            header("Location:dash.php");
           }
-      }
+        }
       ?>
     </div>
 </body>

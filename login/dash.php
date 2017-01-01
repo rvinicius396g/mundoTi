@@ -1,4 +1,45 @@
-<
+<?php 
+  if (isset($_COOKIE["usuario"])) { // If Start
+    ob_start();
+    $usuario = $_COOKIE["usuario"];
+
+
+  ?> 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Dash Board">
+    <meta name="author" content="Robert Vinicius">
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+    <title>Login</title>
+
+  <!-- Bootstrap -->
+    <script src="../bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="../bootstrap/dashboard.css" rel="stylesheet"/>
+    <!-- Custom styles for this Log In -->
+    <link href="../signin.css" rel="stylesheet"/>
+    <!-- Custom style for DASHBOARD -->
+    <link href="style/dashboard.css" rel="stylesheet"/>
+</head>
+
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -8,18 +49,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Painel de Controle</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a name="Bexit" data-toggle="tooltip" data-placement="bottom" title="<?php echo $usuario;?>" href="desconnect.php">Desconectar</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
+          <!-- <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          </form> -->
         </div>
       </div>
     </nav>
@@ -214,3 +253,11 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
+
+
+  <?php
+  } // End if
+ ?>

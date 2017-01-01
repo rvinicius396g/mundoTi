@@ -6,8 +6,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
-		
 	<!--Bibliotecas BootStrap, Folhas de estilo, etc..  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta charset="UTF-8">
@@ -34,6 +32,8 @@
 		     return i;
 		 }
 	 </script>
+	 <!-- GOOGLE RECAPTCHA -->
+	 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
@@ -62,9 +62,10 @@
 			</h2>
 			<h4>Para entrar em Contato preencha os dados abaixo, ou add pelo <b>Skype: robertoviniciusdasilva</b></h4>
 			<hr/>
-			<form role="form" method="get" action="contact.php" style="margin-left:15px;margin-right:35px;">
+			<form role="form" method="POST" action="contact.php" style="margin-left:15px;margin-right:35px;">
 			  <div class="form-group">
 			    <label for="email">Email:</label>
+			    
 			    <input type="email" class="form-control" id="email" placeholder="seu@email.com" name="Bemail" autofocus required="required" />
 			  </div>
 			  <div class="form-group">
@@ -74,7 +75,9 @@
 			  <div class="form-group">
 			  	<label for="Bmessage">Informação <h6 style="margin-top:0;">Insira em detalhes, o que deseja nos contatar</h6></label>
 			  	<textarea id="Bmessage" cols="30" rows="10" class="form-control" name="Bmessage" style="resize: none;" required="required"></textarea>
+
 			  </div>
+			  
 			  <button type="submit" class="btn btn-default" name="Bsend">Enviar</button>
 			</form>
 
